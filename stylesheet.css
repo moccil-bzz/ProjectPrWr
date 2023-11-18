@@ -17,7 +17,7 @@ body {
     margin: 0;
 }
 
-/*header*/
+/*header--------------------------*/
 header {
     background-color: #6C0E23;
     height: 125px;
@@ -29,19 +29,21 @@ header {
     display: flex;
 }
 
-#startBtn > a {
+.start-btn-container > a {
+    flex: 1 100px;
+    display: flex;
     text-decoration: none;
-    color: white;
 }
 
 #startBtn {
+    flex: 1;
     border: solid black 4px;
     padding: 20px;
     font-family: go3v2, serif;
     font-size: 50px;
     color: white;
     background-color: #C42021;
-    flex: 1 100px;
+    cursor: pointer;
 }
 
 #startBtn:hover {
@@ -83,9 +85,10 @@ header {
 
 .navButtons:hover {
     background-color: #380714;
+    cursor: pointer;
 }
 
-/*main*/
+/*main---------------------------*/
 main {
     height: 100vh;
     display: flex;
@@ -96,9 +99,9 @@ main > div {
 
 }
 
-/*footer*/
+/*footer-------------------------*/
 footer {
-    height: 140px;
+    min-height: 140px;
     background-color: #6C0E23;
     display: flex;
 }
