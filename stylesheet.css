@@ -6,6 +6,7 @@ body {
 header {
     background-color: darkred;
     height: 125px;
+    position: relative;
 }
 
 .container {
@@ -24,6 +25,13 @@ header {
     background-image: url("./img/Renminbi_banknotes.JPG");
 }
 
+#second-carousel {
+
+}
+
+#third-carousel {
+
+}
 
 button {
     height: 125px;
