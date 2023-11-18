@@ -1,29 +1,46 @@
+@font-face {
+    font-family: fontquan;
+    src: url("./fonts/Fontquan-XinYiJiXiangSong Regular.ttf");
+}
+
+@font-face {
+    font-family: go3v2;
+    src: url("./fonts/go3v2.ttf");
+}
+
+@font-face {
+    font-family: hanyi;
+    src: url("./fonts/HanyiSentyPagoda Regular.ttf");
+}
+
 body {
     margin: 0;
 }
 
+/*header*/
 header {
     background-color: #6C0E23;
-    height: 150px;
-}
-
-.header-container {
+    height: 125px;
     display: flex;
-    height: 150px;
-    border: solid;
 }
 
 .start-btn-container {
     flex: 1;
-    border: solid;
+    display: flex;
 }
 
 #startBtn {
-    border: solid 1px;
+    border: solid black 4px;
+    padding: 20px;
+    font-family: go3v2, serif;
+    font-size: 50px;
+    color: white;
+    background-color: #C42021;
+    flex: 1 100px;
 }
 
 #startBtn:hover {
-    content: url("./img/start_button_hover.png");
+    background-color: darkred;
 }
 
 .img-container {
@@ -34,7 +51,7 @@ header {
     flex: 5;
 }
 
-
+/*main*/
 main {
     height: 100vh;
     display: flex;
@@ -42,11 +59,12 @@ main {
 
 main > div {
     flex: 1 200px;
-    border: solid;
+
 }
 
+/*footer*/
 footer {
-    height: 125px;
+    height: 140px;
     background-color: #6C0E23;
     display: flex;
 }
@@ -56,8 +74,19 @@ footer > div {
     margin: 10px;
 }
 
-div > span {
+footer > div > span {
     color: white;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
+    font-family: go3v2, serif;
+}
+
+footer > div > ul > li {
+    font-family: go3v2, serif;
+    font-size: 20px;
+}
+
+footer > div > ul > li::marker {
+    content: "- ";
+    font-size: 20px;
 }
