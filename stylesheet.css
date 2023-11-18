@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    position: relative;
 }
 
 header {
@@ -11,26 +10,7 @@ header {
 
 .container {
     display: flex;
-    justify-content: space-between;
     height: 80vh;
-}
-
-.container > div {
-    background-color: blue;
-    border: solid black;
-    flex: 1 200px;
-}
-
-#first-carousel {
-    background-image: url("./img/Renminbi_banknotes.JPG");
-}
-
-#second-carousel {
-
-}
-
-#third-carousel {
-
 }
 
 button {
@@ -42,4 +22,20 @@ button {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+#dragon {
+    margin-top: 12px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    height: 125px;
+}
+
+footer {
+    height: 125px;
+    background-color: darkred;
+
 }
