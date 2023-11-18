@@ -29,6 +29,11 @@ header {
     display: flex;
 }
 
+#startBtn > a {
+    text-decoration: none;
+    color: white;
+}
+
 #startBtn {
     border: solid black 4px;
     padding: 20px;
@@ -51,6 +56,35 @@ header {
     flex: 5;
 }
 
+#dragon {
+    flex: 4;
+}
+
+.navBtn-container {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    height: 125px;
+}
+
+.navBtn-container > div  {
+    flex: 1;
+    display: flex;
+}
+
+.navButtons {
+    flex: 1;
+    background-color: #6C0E23;
+    color: white;
+    font-family: go3v2, serif;
+    font-size: 20px;
+    border: solid black 0;
+}
+
+.navButtons:hover {
+    background-color: #380714;
+}
+
 /*main*/
 main {
     height: 100vh;
@@ -69,24 +103,24 @@ footer {
     display: flex;
 }
 
-footer > div {
-    flex: 1 200px;
+.footerData {
+    flex: 1 100px;
     margin: 10px;
 }
 
-footer > div > span {
+.footerTitles {
     color: white;
     font-weight: bold;
     font-size: 30px;
     font-family: go3v2, serif;
 }
 
-footer > div > ul > li {
+.footerData > ul > li {
     font-family: go3v2, serif;
     font-size: 20px;
 }
 
-footer > div > ul > li::marker {
+.footerData> ul > li::marker {
     content: "- ";
     font-size: 20px;
 }
