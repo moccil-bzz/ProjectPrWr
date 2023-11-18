@@ -3,39 +3,61 @@ body {
 }
 
 header {
-    background-color: darkred;
-    height: 125px;
-    position: relative;
+    background-color: #6C0E23;
+    height: 150px;
 }
 
-.container {
+.header-container {
     display: flex;
-    height: 80vh;
+    height: 150px;
+    border: solid;
 }
 
-button {
-    height: 125px;
-    width: auto;
-    font-size: 25px;
-    font-weight: bold;
-    border: solid 0;
-    position: absolute;
-    left: 0;
-    top: 0;
+.start-btn-container {
+    flex: 1;
+    border: solid;
 }
 
-#dragon {
-    margin-top: 12px;
+#startBtn {
+    border: solid 1px;
+}
+
+#startBtn:hover {
+    content: url("./img/start_button_hover.png");
 }
 
 .img-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 125px;
+    flex: 5;
+}
+
+
+main {
+    height: 100vh;
+    display: flex;
+}
+
+main > div {
+    flex: 1 200px;
+    border: solid;
 }
 
 footer {
     height: 125px;
-    background-color: darkred;
+    background-color: #6C0E23;
+    display: flex;
+}
 
+footer > div {
+    flex: 1 200px;
+    margin: 10px;
+}
+
+div > span {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
 }

@@ -1,0 +1,3 @@
+@media screen and (max-width: 1050px) {
+    .img-container > img {width: 500px}
+}
