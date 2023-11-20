@@ -16,7 +16,7 @@
 body {
     margin: 0;
     max-width: 100%;
-    min-height: 150vh;
+    min-height: 125vh;
     background-image: url("./img/wavy background transp 1.png");
     background-color: white;
     display: flex;
@@ -170,7 +170,6 @@ main {
 
 .credit-container {
     margin: 10px;
-    border: solid;
     display: flex;
     justify-content: space-around;
 }
