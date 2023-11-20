@@ -42,14 +42,7 @@ header {
     height: 173px;
     overflow: hidden;
 }
-/*
-.header-container {
-    width: 96rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-*/
+
 .start-btn-container {
     flex: 1;
     display: flex;
