@@ -1,3 +1,8 @@
 @media screen and (max-width: 1100px) {
     #dragon {display: none;}
 }
+
+
+@media screen and (max-width: 750px) {
+    .footerTitles {font-size: 20px;}
+}

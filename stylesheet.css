@@ -15,6 +15,7 @@
 
 body {
     margin: 0;
+    max-width: 100%;
 }
 
 /*header--------------------------*/
@@ -135,8 +136,11 @@ footer {
 }
 
 .footerData {
-    flex: 1 100px;
+    flex: 1 75px;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerTitles {
@@ -144,14 +148,4 @@ footer {
     font-weight: bold;
     font-size: 30px;
     font-family: go3v2, serif;
-}
-
-.footerData > ul > li {
-    font-family: serif;
-    font-size: 20px;
-}
-
-.footerData> ul > li::marker {
-    content: "- ";
-    font-size: 20px;
 }
