@@ -17,15 +17,35 @@ body {
     margin: 0;
     max-width: 100%;
     background-image: url("./img/wavy background transp 1.png");
+    background-repeat: no-repeat;
 }
 
 /*header--------------------------*/
 header {
-    background-color: #6C0E23;
+    /*background-color: #6C0E23;*/
     height: 125px;
     display: flex;
 }
 
+.bg-header {
+    z-index: -100;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.bg-header > img {
+    width: 100%;
+    height: 173px;
+    overflow: hidden;
+}
+/*
+.header-container {
+    width: 96rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+*/
 .start-btn-container {
     flex: 1;
     display: flex;
@@ -125,14 +145,14 @@ main {
 }
 
 .credit-container {
-    margin: 10px;
-    border: solid;
+    margin: 70px 10px 10px;
+    border: none;
     display: flex;
     justify-content: space-around;
 }
 
 .credit-container > div {
-    border: solid;
+    border: none;
 }
 
 /*footer-------------------------*/
