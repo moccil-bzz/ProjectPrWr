@@ -6,6 +6,7 @@
   <title>Chinas Weg zur Wirtschaftsmacht</title>
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="mobilecss.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <header>
@@ -16,18 +17,30 @@
       <img src="./img/dragonsita.png" height="100" width="auto" alt="dragon photo" id="dragon">
       <div class="navBtn-container">
         <div class="dropdown">
-          <button class="navButtons">Themes<i class="fa fa-caret-down"></i></button>
+          <button class="navButtons">Topics</button>
           <div class="dropdown-content">
             <a href="#">Reformation</a>
-            <a href="#">Theme</a>
-            <a href="#">Theme</a>
+            <a href="#">Topic</a>
+            <a href="#">Topic</a>
           </div>
         </div>
         <div class="dropdown">
           <button class="navButtons">settings</button>
           <div class="dropdown-content">
-            <a href="#">language</a>
-            <a href="#">theme</a>
+            <div class="dropdown-theme">
+              <a href="#">Language</a>
+              <div class="dropdown-content-theme">
+                <a href="#">English</a>
+                <a href="#">Deutsch</a>
+              </div>
+            </div>
+            <div class="dropdown-theme">
+              <a href="#">Theme</a>
+              <div class="dropdown-content-theme">
+                <a id="themeBtn-light">Light</a>
+                <a id="themeBtn-dark">Dark</a>
+              </div>
+            </div>
             <a href="#">settings</a>
           </div>
         </div>
@@ -37,22 +50,22 @@
   <main>
     <div class="credit-container">
       <div>
-        <img src='./img/credits%20left%20transp%201%20og.png' width='128' height='600'>
+        <img src='./img/credits%20left%20transp%201%20og.png' width='128' height='600' alt="our credits">
       </div>
       <div>
-        <img src='./img/credits%20right%20transp%201%20og.png' width='128' height='600'>
+        <img src='./img/credits%20right%20transp%201%20og.png' width='128' height='600' alt="our credits">
       </div>
     </div>
   </main>
   <footer>
     <div class="footerData">
-      <span class="footerTitles">DISCLAIMER</span>
+      <a href="#" class="footerTitles">DISCLAIMER</a>
     </div>
     <div class="footerData">
-      <span class="footerTitles">SOURCE PAGE</span>
+      <a href="#" class="footerTitles">SOURCE PAGE</a>
     </div>
     <div class="footerData">
-      <span class="footerTitles">DATA PRIVACY</span>
+      <a href="#" class="footerTitles">DATA PRIVACY</a>
     </div>
   </footer>
 </body>

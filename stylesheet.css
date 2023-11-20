@@ -16,7 +16,11 @@
 body {
     margin: 0;
     max-width: 100%;
+    min-height: 150vh;
     background-image: url("./img/wavy background transp 1.png");
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 /*header--------------------------*/
@@ -46,6 +50,7 @@ header {
     color: white;
     background-color: #6C0E23;
     cursor: pointer;
+    text-align: center;
 }
 
 #startBtn:hover {
@@ -91,9 +96,13 @@ header {
     cursor: pointer;
 }
 
-
+/*dropdown nav--------------------------*/
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.dropdown > button {
+    text-align: center;
 }
 
 .dropdown-content {
@@ -103,10 +112,10 @@ header {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 5;
+    z-index: 2;
 }
 
-.dropdown-content a {
+.dropdown-content a, button {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -119,9 +128,44 @@ header {
     background-color: #ddd;
 }
 
+/*dropdown theme--------------------------*/
+.dropdown-theme:hover .dropdown-content-theme {
+    display: block;
+}
+
+.dropdown-theme {
+    position: relative;
+}
+
+.dropdown-content-theme {
+    display: none;
+    position: absolute;
+    right: 160px;
+    top: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.dropdown-content-theme a, button {
+    float: none;
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content-theme a:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
 /*main---------------------------*/
 main {
     height: 100vh;
+    flex: 1;
 }
 
 .credit-container {
@@ -151,6 +195,7 @@ footer {
 }
 
 .footerTitles {
+    text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 30px;
