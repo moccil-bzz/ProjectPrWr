@@ -38,17 +38,18 @@ header {
 
 #startBtn {
     flex: 1;
-    border: solid black 4px;
+    border: solid black 0;
     padding: 20px;
     font-family: go3v2, serif;
     font-size: 50px;
     color: white;
-    background-color: #C42021;
+    background-color: #6C0E23;
     cursor: pointer;
 }
 
 #startBtn:hover {
-    background-color: darkred;
+    cursor: pointer;
+    background-color: #380714;
 }
 
 .img-container {
