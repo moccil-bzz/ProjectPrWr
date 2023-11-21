@@ -141,6 +141,19 @@ header {
     background-color: #ddd;
 }
 
+/*dropdown nav arrow-------------*/
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
 /*dropdown theme--------------------------*/
 .dropdown-theme:hover .dropdown-content-theme {
     display: block;
