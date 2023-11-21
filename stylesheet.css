@@ -16,7 +16,7 @@
 body {
     margin: 0;
     max-width: 100%;
-    min-height: 125vh;
+    min-height: 200vh;
     background-image: url("./img/wavy background transp 1.png");
     background-color: white;
     display: flex;
