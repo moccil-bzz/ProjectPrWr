@@ -127,9 +127,8 @@ header {
     z-index: 2;
 }
 
-.dropdown-content a, button {
+.dropdown-content a {
     float: none;
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -146,6 +145,10 @@ header {
     background-color: #ddd;
 }
 
+.dropdown-lightTheme a {
+    color: black;
+}
+
 /*dropdown darkTheme----------*/
 .dropdown-darkTheme {
     background-color: darkslategrey;
@@ -153,6 +156,10 @@ header {
 
 .dropdown-darkTheme a:hover {
     background-color: grey;
+}
+
+.dropdown-darkTheme a {
+    color: white;
 }
 
 /*dropdown theme--------------------------*/
