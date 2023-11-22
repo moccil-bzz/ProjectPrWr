@@ -158,7 +158,11 @@ header {
     background-color: grey;
 }
 
-.dropdown-darkTheme a {
+.dropdown-darkTheme > div > a {
+    color: white;
+}
+
+.dropdown-darkTheme > div > div > a {
     color: white;
 }
 
