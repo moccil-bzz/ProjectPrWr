@@ -13,6 +13,10 @@ function changeThemeLight() {
         i.classList.remove("dropdown-darkTheme");
         i.classList.add("dropdown-lightTheme");
     });
+    document.querySelectorAll(".arrowColorDark").forEach((i) => {
+        i.classList.remove("arrowColorDark");
+        i.classList.add("arrowColorLight");
+    });
 }
 
 function changeThemeDark() {
@@ -22,5 +26,9 @@ function changeThemeDark() {
     document.querySelectorAll(".dropdown-lightTheme").forEach((i) => {
         i.classList.remove("dropdown-lightTheme")
         i.classList.add("dropdown-darkTheme");
+    });
+    document.querySelectorAll(".arrowColorLight").forEach((i) => {
+        i.classList.remove("arrowColorLight");
+        i.classList.add("arrowColorDark");
     });
 }

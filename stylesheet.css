@@ -103,6 +103,7 @@ header {
     font-size: 20px;
     border: solid black 0;
     z-index: 3;
+    transition: .1s;
 }
 
 .navButtons:hover {
@@ -207,18 +208,26 @@ header {
 }
 
 /*dropdown nav arrow-------------*/
-.arrowWhite {
+.arrowNavbar {
     border: solid white;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
 }
 
-.arrowBlack {
-    border: solid black;
+.arrowDropdown {
+    border-style: solid;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+}
+
+.arrowColorLight {
+    border-color: black;
+}
+
+.arrowColorDark {
+    border-color: white;
 }
 
 .left {
