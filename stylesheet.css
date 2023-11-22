@@ -102,6 +102,7 @@ header {
     font-family: go3v2, serif;
     font-size: 20px;
     border: solid black 0;
+    z-index: 3;
 }
 
 .navButtons:hover {
@@ -112,19 +113,25 @@ header {
 /*dropdown nav--------------------------*/
 .dropdown:hover .dropdown-content {
     display: block;
+    top: 125px;
 }
 
 .dropdown > button {
     text-align: center;
 }
 
+.dropdown {
+    justify-content: right;
+}
+
 .dropdown-content {
-    display: none;
+    display: block;
     position: absolute;
-    top: 125px;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 2;
+    top: 0;
+    transition: .2s;
 }
 
 .dropdown-content a {
