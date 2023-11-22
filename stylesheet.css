@@ -18,7 +18,7 @@ body {
     max-width: 100%;
     min-height: 200vh;
     background-image: url("./img/wavy background transp 1.png");
-    background-color: white;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
@@ -160,11 +160,11 @@ header {
 
 /*dropdown darkTheme----------*/
 .dropdown-darkTheme {
-    background-color: #646464;
+    background-color: black;
 }
 
 .dropdown-darkTheme a:hover {
-    background-color: grey;
+    background-color: #1F1F1FFF;
 }
 
 .dropdown-darkTheme > div > a {

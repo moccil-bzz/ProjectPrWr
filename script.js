@@ -20,7 +20,7 @@ function changeThemeLight() {
 }
 
 function changeThemeDark() {
-    document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+    document.getElementsByTagName("body")[0].style.backgroundColor = "#1F1F1FFF";
     document.getElementById("credits-left").src = './img/credits%20left%20transp%20og%201%20dm.png';
     document.getElementById("credits-right").src = './img/credits%20right%20transp%20og%201%20dm.png';
     document.querySelectorAll(".dropdown-lightTheme").forEach((i) => {
