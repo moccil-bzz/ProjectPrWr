@@ -343,7 +343,16 @@ main {
     background-image: url("img/background waves 3.png");
 }
 
+#keyart-1 {
+    margin: 70px 10px 10px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+}
 
+#keyart-1 > div {
+    border: none;
+}
 
 /*h*/
 .sticky-navBar {
@@ -356,23 +365,13 @@ main {
     flex-flow: row wrap;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .sticky-navBar a {
     font-family: go3v2, serif;
     font-size: 20px;
     color: white;
-}
-
-.credit-container {
-    margin: 70px 10px 10px;
-    border: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.credit-container > div {
-    border: none;
 }
 
 .segment-1 {
