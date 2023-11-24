@@ -111,6 +111,15 @@ header {
     cursor: pointer;
 }
 
+.navButtons:hover > img {
+    transform: rotate(180deg);
+}
+
+.settings-cog {
+    transform: rotate(0);
+    transition: 1s;
+}
+
 /*dropdown nav--------------------------*/
 .dropdown:hover .dropdown-content {
     display: block;
