@@ -64,6 +64,7 @@ header {
     background-color: #6C0E23;
     cursor: pointer;
     text-align: center;
+    transition: .1s;
 }
 
 #startBtn:hover {
@@ -267,6 +268,34 @@ main {
 
 .credit-container > div {
     border: none;
+}
+
+.segment-1 {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    /*border: pink solid;*/
+    margin-right: 10%;
+}
+
+.intro-chi-div {
+    display: block;
+    /*border: blue solid;*/
+    position: relative;
+    margin-right: 20px;
+}
+
+.intro-chi {
+    width: 200px;
+}
+
+.text-block {
+    display: block;
+    /*border: red solid;*/
+    position: relative;
+    font-family: hanyi, serif;
+    font-size: 160%;
 }
 
 /*footer-------------------------*/
