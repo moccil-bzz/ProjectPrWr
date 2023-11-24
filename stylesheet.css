@@ -365,7 +365,7 @@ main {
     flex-flow: row wrap;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1;
 }
 
 .sticky-navBar a {
