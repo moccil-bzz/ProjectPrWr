@@ -13,4 +13,15 @@
     #startBtn {
         font-size: 35px;
     }
+    .segment-1 {
+        left: 5%;
+
+        margin-right: 5%;
+    }
+    .intro-chi {
+        width: 150px;
+    }
+    .text-block {
+        font-size: 3vw;
+    }
 }
