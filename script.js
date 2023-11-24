@@ -3,6 +3,13 @@ document.addEventListener("DOMContentLoaded", content_loader);
 function content_loader(){
     document.getElementById("themeBtn-light").addEventListener("click", changeThemeLight);
     document.getElementById("themeBtn-dark").addEventListener("click", changeThemeDark);
+    document.getElementById("hamburgerBtn").addEventListener("click", phoneNav);
+    addEventListener("resize", (event) => {
+        let x = document.getElementById("phoneNavbar");
+        if (window.innerWidth > 1170 && x.style.display === "flex") {
+            x.style.display = "none";
+        }
+    });
 }
 
 function changeThemeLight() {
@@ -31,4 +38,13 @@ function changeThemeDark() {
         i.classList.remove("arrowColorLight");
         i.classList.add("arrowColorDark");
     });
+}
+
+function phoneNav(){
+    let x = document.getElementById("phoneNavbar");
+    if (x.style.display === "flex") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "flex";
+    }
 }

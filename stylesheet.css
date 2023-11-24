@@ -121,6 +121,14 @@ header {
     transition: 1s;
 }
 
+.extra-space {
+    display: none;
+    flex: 3;
+    background-color: #6C0E23;
+    z-index: 10;
+    height: 125px;
+}
+
 /*dropdown nav--------------------------*/
 .dropdown:hover .dropdown-content {
     display: block;
@@ -253,6 +261,50 @@ header {
     -webkit-transform: rotate(45deg);
 }
 
+/*Hamburger Menu---------------------*/
+.hamburgerMenu {
+    display: none;
+    flex: 1;
+    height: 125px;
+}
+
+#hamburgerBtn {
+    background-color: #6C0E23;
+    border: solid black 1px;
+    border-radius: 3px;
+    color: white;
+    padding: 15px;
+}
+
+#hamburgerBtn i {
+    font-size: 25px;
+}
+
+#hamburgerBtn:hover {
+    background-color: #380714;
+}
+
+#phoneNavbar {
+    margin-top: 40px;
+    display: none;
+    background-color: red;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+#phoneNavbar a {
+    padding: 15px;
+    text-decoration: none;
+    font-family: go3v2, serif;
+    color: white;
+    font-size: 20px;
+}
+
+#phoneNavbar a:hover {
+    background-color: #6C0E23;
+}
+
 /*main---------------------------*/
 main {
     height: 100vh;
@@ -261,10 +313,9 @@ main {
 
 /*h*/
 .sticky-navBar {
-    margin-top: 35px;
+    margin-top: 40px;
     height: 7vh;
     background-color: red;
-    border: solid;
     display: flex;
     justify-content: space-around;
     align-items: center;

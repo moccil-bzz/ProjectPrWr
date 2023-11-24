@@ -1,6 +1,23 @@
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1170px) {
     #dragon {
         display: none;
+    }
+    .extra-space {
+        display: block;
+    }
+
+    .sticky-navBar {
+        display: none;
+    }
+
+    .navBtn-container {
+        display: none;
+    }
+
+    .hamburgerMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
