@@ -6,6 +6,7 @@
   <title>Chinas Weg zur Wirtschaftsmacht</title>
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="mobilecss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="script.js"></script>
 </head>
 <body>
@@ -14,11 +15,19 @@
     <img src='img/idaf%20prwr%20wgcwzwm%20top%20navbar%202.png' alt='A cool navbar background is meant to be here...'>
   </div>
   <div class="start-btn-container">
-    <a href="index.html"><button id="startBtn">Home</button></a>
+
+    <a href="index.html">
+      <button id="startBtn">
+        <span id="background-image-st-bt"></span>
+        <span id="st-bt-text">Home</span>
+      </button>
+    </a>
   </div>
   <div class="img-container">
     <!-- PC stimulation navbar -->
     <img src="./img/black%20dragon%20nav%20bar%203%20wh%20squished.png" height="100" width="auto" alt="dragon photo" id="dragon">
+    <div class="extra-space">
+    </div>
     <div class="navBtn-container">
       <div class="dropdown">
         <button class="navButtons"> <img class='settings-cog' src='img/cog%20wh.png' height='30' width='30'> settings <i class="arrowNavbar down"></i></button>
@@ -40,15 +49,33 @@
         </div>
       </div>
     </div>
-    <!-- PC stimulation navbar end-->
+    <!-- PC stimulation navbar end mommy-->
     <!-- mobile stimulation navbar-->
-
+    <div class="hamburgerMenu">
+      <a id="hamburgerBtn"><i class="fa fa-bars"></i></a>
+    </div>
     <!-- hamburger-menu -->
 
-    <!-- mobile stimulation navbar end-->
+    <!-- mobile stimulation navbar end h-->
   </div>
 </header>
+<div class="sticky-navBar">
+  <a href="#">aaa</a>
+  <a href="#">aaa</a>
+  <a href="#">aaa</a>
+  <a href="#">aaa</a>
+  <a href="#">aaa</a>
+  <a href="#">aaa</a>
+</div>
+<div id="phoneNavbar">
+  <a href="#">News</a>
+  <a href="#">Contact</a>
+  <a href="#">About</a>
+</div>
 <main>
+  <div class="keyart" id="parallax">
+    <div class="keyart_layer parallax" id="keyart-0" data-speed="50"></div>		<!-- 00.0 -->
+  </div>
   <div class="segment-1">
     <div class="intro-chi-div">
       <img class="intro-chi" src="img/beginnings%201.png">

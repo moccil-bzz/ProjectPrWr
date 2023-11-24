@@ -56,6 +56,8 @@ header {
 
 #startBtn {
     flex: 1;
+    position: relative;
+    overflow: hidden;
     border: solid black 0;
     padding: 20px;
     font-family: go3v2, serif;
@@ -65,6 +67,33 @@ header {
     cursor: pointer;
     text-align: center;
     transition: .1s;
+    justify-content: center;
+    justify-items: center;
+}
+
+#background-image-st-bt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./img/idaf prwr wgcwzwm home button ch text.png");
+    background-size: auto 75px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+    transition: 1s;
+    z-index: 1;
+}
+
+#startBtn:hover #background-image-st-bt {
+    opacity: 50%;
+    background-size: auto 100px;
+}
+
+#st-bt-text {
+    position: relative;
+    z-index: 2;
 }
 
 #startBtn:hover {
@@ -365,7 +394,7 @@ main {
     flex-flow: row wrap;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 1 ;
 }
 
 .sticky-navBar a {

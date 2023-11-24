@@ -30,6 +30,12 @@
     #startBtn {
         font-size: 35px;
     }
+    #background-image-st-bt {
+        background-size: auto 50px;
+    }
+    #startBtn:hover #background-image-st-bt {
+        background-size: auto 75px;
+    }
     .segment-1 {
         left: 5%;
 
