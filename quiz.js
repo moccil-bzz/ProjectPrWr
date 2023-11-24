@@ -8,7 +8,7 @@ function document_load(){
         checkbox.checked = false;
     });
 }
-
+//gay
 function loader(){
     alert("hello")
 }
@@ -20,6 +20,8 @@ function gay(event) {
     const scorediv = document.getElementById("score");
     const questions = document.querySelectorAll(".question");
     const label = document.querySelectorAll('label');
+    const submitButton = document.getElementById('submitter');
+
 
     questions.forEach(question => {
         const correctAnswers = question.dataset.correct.split(',');
@@ -49,6 +51,7 @@ function gay(event) {
     checkboxes.forEach(checkbox => {
         checkbox.disabled = true;
     });
+    submitButton.disabled = true;
 
     scorediv.innerHTML += `${score}/${totalCorrectAnswers}`;
 }
