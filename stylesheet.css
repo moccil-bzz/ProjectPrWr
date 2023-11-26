@@ -222,7 +222,7 @@ header {
 }
 
 .dropdown-darkTheme > div > div > a {
-    color: white;
+    color: #ffffff;
 }
 
 /*dropdown theme--------------------------*/
@@ -368,7 +368,7 @@ main {
     position: fixed;
 }
 #keyart-0 {
-    top: 100px;
+    top: 80px;
     background-image: url("img/background waves 3.png");
 }
 
@@ -385,22 +385,52 @@ main {
 
 /*h*/
 .sticky-navBar {
-    margin-top: 40px;
+    margin-top: 50px;
     height: 7vh;
-    background-color: red;
+    /*background-color: red;*/
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
     position: sticky;
     top: 0;
-    z-index: 1 ;
+    z-index: 1;
+}
+
+.pg-nav-but {
+    background-color: #15141f;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 2;
+    display: block;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.pg-nav-but:hover {
+    background-color: darkblue;
 }
 
 .sticky-navBar a {
     font-family: go3v2, serif;
     font-size: 20px;
     color: white;
+    text-decoration: none;
+}
+
+.sticky-navBar.is-pinned {
+    font-size: .8em;
+    opacity: 2%;
+    background-color: blue;
+}
+
+#active-page {
+    background-color: #a61b32;
+    transition: .2s;
+}
+
+#active-page:hover {
+    background-color: #5d0f1c;
 }
 
 .segment-1 {

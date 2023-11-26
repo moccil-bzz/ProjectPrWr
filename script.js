@@ -130,6 +130,27 @@ function startSite() {
 document.body.onload = startSite();
 
 
+let header = document.querySelector('.header');
+let navbar = document.querySelector('.sticky-navBar');
+let headerOffset = header.offsetHeight;
+
+function checkScroll() {
+    if (window.scrollY >= headerOffset) {
+        navbar.style.top = '0';
+    } else {
+        navbar.style.top = '-125px'; // Adjust as needed
+    }
+}
+
+window.addEventListener('scroll', checkScroll);
+
+
+
+
+
+
+//----------Hamburger Thingy----------//
+
 function phoneNav(){
     let x = document.getElementById("phoneNavbar");
     if (x.style.display === "flex") {
