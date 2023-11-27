@@ -398,6 +398,7 @@ main {
 }
 
 .pg-nav-but {
+    margin-top: 5px;
     background-color: #15141f;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     padding: 15px;
