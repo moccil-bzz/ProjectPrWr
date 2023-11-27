@@ -17,7 +17,7 @@ body {
     margin: 0;
     max-width: 100%;
     min-height: 200vh;
-    background-image: url("./img/wavy background transp 1.png");
+    /*background-image: url("./img/wavy background transp 1.png");*/
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -56,6 +56,8 @@ header {
 
 #startBtn {
     flex: 1;
+    position: relative;
+    overflow: hidden;
     border: solid black 0;
     padding: 20px;
     font-family: go3v2, serif;
@@ -64,6 +66,34 @@ header {
     background-color: #6C0E23;
     cursor: pointer;
     text-align: center;
+    transition: .1s;
+    justify-content: center;
+    justify-items: center;
+}
+
+#background-image-st-bt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./img/idaf prwr wgcwzwm home button ch text.png");
+    background-size: auto 75px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+    transition: 1s;
+    z-index: 1;
+}
+
+#startBtn:hover #background-image-st-bt {
+    opacity: 50%;
+    background-size: auto 100px;
+}
+
+#st-bt-text {
+    position: relative;
+    z-index: 2;
 }
 
 #startBtn:hover {
@@ -118,6 +148,14 @@ header {
 .settings-cog {
     transform: rotate(0);
     transition: 1s;
+}
+
+.extra-space {
+    display: none;
+    flex: 3;
+    background-color: #6C0E23;
+    z-index: 10;
+    height: 125px;
 }
 
 /*dropdown nav--------------------------*/
@@ -184,7 +222,7 @@ header {
 }
 
 .dropdown-darkTheme > div > div > a {
-    color: white;
+    color: #ffffff;
 }
 
 /*dropdown theme--------------------------*/
@@ -252,21 +290,175 @@ header {
     -webkit-transform: rotate(45deg);
 }
 
+/*Hamburger Menu---------------------*/
+.hamburgerMenu {
+    display: none;
+    flex: 1;
+    height: 125px;
+}
+
+#hamburgerBtn {
+    background-color: #6C0E23;
+    border: solid black 1px;
+    border-radius: 3px;
+    color: white;
+    padding: 15px;
+}
+
+#hamburgerBtn i {
+    font-size: 25px;
+}
+
+#hamburgerBtn:hover {
+    background-color: #380714;
+}
+
+#phoneNavbar {
+    margin-top: 40px;
+    display: none;
+    background-color: red;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+#phoneNavbar a {
+    padding: 15px;
+    text-decoration: none;
+    font-family: go3v2, serif;
+    color: white;
+    font-size: 20px;
+}
+
+#phoneNavbar a:hover {
+    background-color: #6C0E23;
+}
+
 /*main---------------------------*/
 main {
     height: 100vh;
     flex: 1;
 }
 
-.credit-container {
+/*parallax----------------------*/
+
+.keyart, .keyart_layer {
+    height: 1000px;
+}
+
+#parallax {
+    display: block;
+}
+
+
+.keyart {
+    position: relative;
+    z-index: -1000;
+}
+
+.keyart_layer {
+    background-position: bottom center;
+    background-size: auto 1500px;
+    background-repeat: repeat-x;
+    width: 100%;
+    position: absolute;
+}
+
+.keyart_layer.parallax {
+    position: fixed;
+}
+#keyart-0 {
+    top: 80px;
+    background-image: url("img/background waves 3.png");
+}
+
+#keyart-1 {
     margin: 70px 10px 10px;
     border: none;
     display: flex;
     justify-content: space-around;
 }
 
-.credit-container > div {
+#keyart-1 > div {
     border: none;
+}
+
+/*h*/
+.sticky-navBar {
+    margin-top: 50px;
+    height: 7vh;
+    /*background-color: red;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.pg-nav-but {
+    background-color: #15141f;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 2;
+    display: block;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.pg-nav-but:hover {
+    background-color: darkblue;
+}
+
+.sticky-navBar a {
+    font-family: go3v2, serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.sticky-navBar.is-pinned {
+    font-size: .8em;
+    opacity: 2%;
+    background-color: blue;
+}
+
+#active-page {
+    background-color: #a61b32;
+    transition: .2s;
+}
+
+#active-page:hover {
+    background-color: #5d0f1c;
+}
+
+.segment-1 {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    /*border: pink solid;*/
+    margin-right: 10%;
+}
+
+.intro-chi-div {
+    display: block;
+    /*border: blue solid;*/
+    position: relative;
+    margin-right: 20px;
+}
+
+.intro-chi {
+    width: 200px;
+}
+
+.text-block {
+    display: block;
+    /*border: red solid;*/
+    position: relative;
+    font-family: hanyi, serif;
+    font-size: 160%;
 }
 
 /*footer-------------------------*/

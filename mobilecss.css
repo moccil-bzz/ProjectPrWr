@@ -1,6 +1,23 @@
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1170px) {
     #dragon {
         display: none;
+    }
+    .extra-space {
+        display: block;
+    }
+
+    .sticky-navBar {
+        display: none;
+    }
+
+    .navBtn-container {
+        display: none;
+    }
+
+    .hamburgerMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
@@ -12,5 +29,22 @@
     }
     #startBtn {
         font-size: 35px;
+    }
+    #background-image-st-bt {
+        background-size: auto 50px;
+    }
+    #startBtn:hover #background-image-st-bt {
+        background-size: auto 75px;
+    }
+    .segment-1 {
+        left: 5%;
+
+        margin-right: 5%;
+    }
+    .intro-chi {
+        width: 150px;
+    }
+    .text-block {
+        font-size: 3vw;
     }
 }
