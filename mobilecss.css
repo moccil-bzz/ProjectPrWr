@@ -1,3 +1,10 @@
+@media screen and (max-width: 1350px) {
+    .sticky-navBar a {
+        font-size: 15px;
+    }
+
+}
+
 @media screen and (max-width: 1170px) {
     #dragon {
         display: none;

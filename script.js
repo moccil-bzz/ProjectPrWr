@@ -6,6 +6,7 @@ function content_loader(){
     document.getElementById("hamburgerBtn").addEventListener("click", phoneNav);
     addEventListener("resize", (event) => {
         let x = document.getElementById("phoneNavbar");
+        /*console.log(window.innerWidth)*/
         if (window.innerWidth > 1170 && x.style.display === "flex") {
             x.style.display = "none";
         }
