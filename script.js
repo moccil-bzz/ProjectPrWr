@@ -102,7 +102,7 @@ function content_loader(){
             // Set the boolean variable to true when mouseover occurs
             isMouseOver = true;
             i.style.fontSize = "20px";
-            console.log('Mouse over the element!');
+            //console.log('Mouse over the element!');
         });
     });
 
@@ -110,21 +110,22 @@ function content_loader(){
         i.addEventListener('mouseout', function() {
             // Set the boolean variable to true when mouseover occurs
             let scrollTop = window.scrollY;
-            if (scrollTop >= 125) {
+            if (scrollTop >= 175) {
                 i.style.fontSize = "0"
             }
             isMouseOver = false;
-            console.log('Mouse out of the element!');
+            //console.log('Mouse out of the element!');
         });
     });
 
     function navSquisher(scroller) {
         let naviTextList = document.querySelectorAll(".sticky-navBar a")
+        //console.log(window.scrollY)
         naviTextList.forEach((i) => {
             if (isMouseOver === true) {
                 i.style.fontSize = "20";
             } else {
-                if (scroller >= 125) {
+                if (scroller >= 175) {
                     i.style.fontSize = "0";
                 } else {
                     i.style.fontSize = "20px";
