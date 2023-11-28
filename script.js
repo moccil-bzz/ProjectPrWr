@@ -13,10 +13,9 @@ function content_loader(){
     });
     let header = document.querySelector(".header");
 
-    function checkScroll() {
+    function checkScroll(scroller) {
         let hamburgerBtn = document.getElementById("hamburgerBtnLow");
-        let scrollTop = window.scrollY;
-        if (scrollTop >= 125) {
+        if (scroller >= 125) {
             hamburgerBtn.style.opacity = "100";
         } else {
             hamburgerBtn.style.opacity = "0"; // Adjust as needed
@@ -48,6 +47,7 @@ function content_loader(){
         window.addEventListener("scroll", function(event){
 
             let top = this.pageYOffset;
+            let scrollTop = window.scrollY;
 
             let layers = document.getElementsByClassName("parallax");
             let layer, speed, yPos;
@@ -58,7 +58,8 @@ function content_loader(){
                 layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
 
             }
-            checkScroll()
+            checkScroll(scrollTop)
+            navSquisher(scrollTop)
         });
 }
     function dispelParallax() {
@@ -89,6 +90,45 @@ function content_loader(){
             castParallax();
         }
 
+    }
+    let isMouseOver = false;
+    let naviTextList = document.querySelectorAll(".sticky-navBar a");
+
+    // Add a mouseover event listener to the element
+    naviTextList.forEach((i) => {
+        i.addEventListener('mouseover', function() {
+            // Set the boolean variable to true when mouseover occurs
+            isMouseOver = true;
+            i.style.fontSize = "20px";
+            console.log('Mouse over the element!');
+        });
+    });
+
+    naviTextList.forEach((i) => {
+        i.addEventListener('mouseout', function() {
+            // Set the boolean variable to true when mouseover occurs
+            let scrollTop = window.scrollY;
+            if (scrollTop >= 125) {
+                i.style.fontSize = "0"
+            }
+            isMouseOver = false;
+            console.log('Mouse out of the element!');
+        });
+    });
+
+    function navSquisher(scroller) {
+        let naviTextList = document.querySelectorAll(".sticky-navBar a")
+        naviTextList.forEach((i) => {
+            if (isMouseOver === true) {
+                i.style.fontSize = "20";
+            } else {
+                if (scroller >= 125) {
+                    i.style.fontSize = "0";
+                } else {
+                    i.style.fontSize = "20px";
+                }
+            }
+        })
     }
 
 function changeThemeLight() {

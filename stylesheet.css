@@ -132,7 +132,7 @@ header {
     font-family: go3v2, serif;
     font-size: 20px;
     border: solid black 0;
-    z-index: 3;
+    z-index: 151;
     transition: .1s;
 }
 
@@ -180,7 +180,7 @@ header {
     position: absolute;
     min-width: 150px;
     box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
-    z-index: 2;
+    z-index: 150;
     top: 0;
     transition: .2s;
 }
@@ -241,7 +241,7 @@ header {
     top: 0;
     min-width: 150px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 2;
+    z-index: 150;
 }
 
 .dropdown-content-theme a, button {
@@ -337,7 +337,7 @@ header {
     background-color: red;
     flex-direction: column;
     position: sticky;
-    z-index: 100;
+    z-index: 10;
     top: 0;
     opacity: 0;
     transition: .3s;
@@ -415,7 +415,7 @@ main {
     flex-flow: row wrap;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 100;
 }
 
 .pg-nav-but {
@@ -440,11 +440,7 @@ main {
     text-decoration: none;
 }
 
-.sticky-navBar.is-pinned {
-    font-size: .8em;
-    opacity: 2%;
-    background-color: blue;
-}
+
 
 #active-page {
     background-color: #a61b32;
