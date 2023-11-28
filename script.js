@@ -13,6 +13,8 @@ function content_loader(){
     });
     let header = document.querySelector(".header");
 
+
+    //-------------MARKOS STUFF START NO TOUCHYYY!!!!-------------//
     function checkScroll(scroller) {
         let hamburgerBtn = document.getElementById("hamburgerBtnLow");
         if (scroller >= 125) {
@@ -130,6 +132,9 @@ function content_loader(){
             }
         })
     }
+document.body.onload = startSite();
+
+//-------------MARKOS STUFF END NO TOUCHYYY!!!!-------------//
 
 function changeThemeLight() {
     document.getElementsByTagName("body")[0].style.backgroundColor = "white";
@@ -158,7 +163,7 @@ function changeThemeDark() {
         i.classList.add("arrowColorDark");
     });
 }
-document.body.onload = startSite();
+
 
 
 }
