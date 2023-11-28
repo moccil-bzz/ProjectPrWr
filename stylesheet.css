@@ -305,6 +305,16 @@ header {
     padding: 15px;
 }
 
+#hamburgerBtnLow {
+    background-color: #6C0E23;
+    border: solid black 1px;
+    border-radius: 3px;
+    color: white;
+    padding: 15px;
+    opacity: 0;
+    transition: .5s;
+}
+
 #hamburgerBtn i {
     font-size: 25px;
 }
@@ -313,13 +323,24 @@ header {
     background-color: #380714;
 }
 
+#hamburgerBtnLow i {
+    font-size: 25px;
+}
+
+#hamburgerBtnLow:hover {
+    background-color: #380714;
+}
+
 #phoneNavbar {
     margin-top: 40px;
-    display: none;
+    display: flex;
     background-color: red;
     flex-direction: column;
     position: sticky;
+    z-index: 100;
     top: 0;
+    opacity: 0;
+    transition: .3s;
 }
 
 #phoneNavbar a {
@@ -409,7 +430,7 @@ main {
 }
 
 .pg-nav-but:hover {
-    background-color: darkblue;
+    background-color: #7a7a12;
 }
 
 .sticky-navBar a {

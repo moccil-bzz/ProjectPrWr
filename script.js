@@ -4,14 +4,92 @@ function content_loader(){
     document.getElementById("themeBtn-light").addEventListener("click", changeThemeLight);
     document.getElementById("themeBtn-dark").addEventListener("click", changeThemeDark);
     document.getElementById("hamburgerBtn").addEventListener("click", phoneNav);
+    document.getElementById("hamburgerBtnLow").addEventListener("click", phoneNav);
     addEventListener("resize", (event) => {
         let x = document.getElementById("phoneNavbar");
-        /*console.log(window.innerWidth)*/
         if (window.innerWidth > 1170 && x.style.display === "flex") {
             x.style.display = "none";
         }
     });
+    let header = document.querySelector(".header");
+
+    function checkScroll() {
+        let hamburgerBtn = document.getElementById("hamburgerBtnLow");
+        let scrollTop = window.scrollY;
+        if (scrollTop >= 125) {
+            hamburgerBtn.style.opacity = "100";
+        } else {
+            hamburgerBtn.style.opacity = "0"; // Adjust as needed
+        }}
+    function castParallax() {
+
+        let opThresh = 350;
+        let opFactor = 750;
+
+        /*
+            $(window).scroll(function(){
+                let windowScroll = $(window).scrollTop();
+
+                $('.keyart_layer.parallax').each(function(){
+                    let $layer = $(this);
+                    let yPos = -(windowScroll * $layer.data('speed') / 100);
+                    $layer.css({
+                        "transform" : "translate3d(0px, " + yPos + "px, 0px)"
+                    });
+
+                });
+
+
+                let backgroundOpacity = (windowScroll > opThresh ? (windowScroll - opThresh) / opFactor : 0);
+                $('#keyart-scrim').css('opacity', backgroundOpacity);
+            });
+
+        */
+        window.addEventListener("scroll", function(event){
+
+            let top = this.pageYOffset;
+
+            let layers = document.getElementsByClassName("parallax");
+            let layer, speed, yPos;
+            for (let i = 0; i < layers.length; i++) {
+                layer = layers[i];
+                speed = layer.getAttribute('data-speed');
+                let yPos = -(top * speed / 100);
+                layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+
+            }
+            checkScroll()
+        });
 }
+    function dispelParallax() {
+        $("#nonparallax").css('display','block');
+        $("#parallax").css('display','none');
+    }
+    function startSite() {
+
+        let platform = navigator.platform.toLowerCase();
+        let userAgent = navigator.userAgent.toLowerCase();
+
+        if ( platform.indexOf('ipad') != -1  ||  platform.indexOf('iphone') != -1 )
+        {
+            dispelParallax();
+        }
+
+        else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
+        {
+            castParallax();
+            if ($.browser.webkit)
+            {
+                //castSmoothScroll();
+            }
+        }
+
+        else
+        {
+            castParallax();
+        }
+
+    }
 
 function changeThemeLight() {
     document.getElementsByTagName("body")[0].style.backgroundColor = "white";
@@ -40,113 +118,10 @@ function changeThemeDark() {
         i.classList.add("arrowColorDark");
     });
 }
-
-
-
-
-
-function castParallax() {
-
-    let opThresh = 350;
-    let opFactor = 750;
-
-    /*
-        $(window).scroll(function(){
-            let windowScroll = $(window).scrollTop();
-
-            $('.keyart_layer.parallax').each(function(){
-                let $layer = $(this);
-                let yPos = -(windowScroll * $layer.data('speed') / 100);
-                $layer.css({
-                    "transform" : "translate3d(0px, " + yPos + "px, 0px)"
-                });
-
-            });
-
-
-            let backgroundOpacity = (windowScroll > opThresh ? (windowScroll - opThresh) / opFactor : 0);
-            $('#keyart-scrim').css('opacity', backgroundOpacity);
-        });
-
-    */
-    window.addEventListener("scroll", function(event){
-
-        let top = this.pageYOffset;
-
-        let layers = document.getElementsByClassName("parallax");
-        let layer, speed, yPos;
-        for (let i = 0; i < layers.length; i++) {
-            layer = layers[i];
-            speed = layer.getAttribute('data-speed');
-            let yPos = -(top * speed / 100);
-            layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-
-        }
-    });
-
-
-}
-
-function dispelParallax() {
-    $("#nonparallax").css('display','block');
-    $("#parallax").css('display','none');
-}
-
-function castSmoothScroll() {
-    $.srSmoothscroll({
-        step: 80,
-        speed: 300,
-        ease: 'linear'
-    });
-}
-
-
-
-function startSite() {
-
-    let platform = navigator.platform.toLowerCase();
-    let userAgent = navigator.userAgent.toLowerCase();
-
-    if ( platform.indexOf('ipad') != -1  ||  platform.indexOf('iphone') != -1 )
-    {
-        dispelParallax();
-    }
-
-    else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
-    {
-        castParallax();
-        if ($.browser.webkit)
-        {
-            //castSmoothScroll();
-        }
-    }
-
-    else
-    {
-        castParallax();
-    }
-
-}
-
 document.body.onload = startSite();
 
 
-let header = document.querySelector('.header');
-let navbar = document.querySelector('.sticky-navBar');
-let headerOffset = header.offsetHeight;
-
-function checkScroll() {
-    if (window.scrollY >= headerOffset) {
-        navbar.style.top = '0';
-    } else {
-        navbar.style.top = '-125px'; // Adjust as needed
-    }
 }
-
-window.addEventListener('scroll', checkScroll);
-
-
-
 
 
 
@@ -154,9 +129,9 @@ window.addEventListener('scroll', checkScroll);
 
 function phoneNav(){
     let x = document.getElementById("phoneNavbar");
-    if (x.style.display === "flex") {
-        x.style.display = "none";
+    if (x.style.opacity === "100") {
+        x.style.opacity = "0";
     } else {
-        x.style.display = "flex";
+        x.style.opacity = "100";
     }
 }
