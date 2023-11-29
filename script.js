@@ -1,16 +1,28 @@
 document.addEventListener("DOMContentLoaded", content_loader);
+let swiggity;
+let swooty;
+function changer() {
+    if (window.innerWidth <= 1350) {
+        swiggity = "15px";
+        swooty = "15px";
+    } else {
+        swiggity = "20px";
+        swooty = "15px";
+    }
+}
+changer()
 
 function content_loader(){
     document.getElementById("themeBtn-light").addEventListener("click", changeThemeLight);
     document.getElementById("themeBtn-dark").addEventListener("click", changeThemeDark);
     document.getElementById("hamburgerBtn").addEventListener("click", phoneNav);
     document.getElementById("hamburgerBtnLow").addEventListener("click", phoneNav);
+    navSquisher(window.scrollY)
+
 
     //-------------MARKOS STUFF START NO TOUCHYYY!!!!-------------//
 
-    let swiggity;
-    let swooty;
-    changer()
+
     addEventListener("resize", (event) => {
         let x = document.getElementById("phoneNavbar");
         if (window.innerWidth > 1170 && x.style.display === "flex") {
@@ -29,15 +41,7 @@ function content_loader(){
             hamburgerBtn.style.opacity = "0"; // Adjust as needed
         }}
 
-    function changer() {
-        if (window.innerWidth <= 1350) {
-            swiggity = "15px";
-            swooty = "10px";
-        } else {
-            swiggity = "20px";
-            swooty = "15px";
-        };
-    };
+
 
     function castParallax() {
 
