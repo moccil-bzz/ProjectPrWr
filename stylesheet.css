@@ -307,7 +307,7 @@ header {
 #hamburgerBtn {
     background-color: #6C0E23;
     border: solid black 1px;
-    border-radius: 3px;
+    border-radius: 6px;
     color: white;
     padding: 15px;
 }
@@ -372,6 +372,25 @@ main {
     flex: 1;
 }
 
+.cred-between {
+    position: absolute;
+    top: 300px;
+    /*border: solid red 1px;*/
+    display: flex;
+    justify-content: space-around;
+    left: 40%;
+    right: 40%;
+    margin: auto;
+}
+
+.cred-between > a {
+    text-align: center;
+    font-family: go3v2, serif;
+    font-size: 40px;
+    /*border: solid black 1px;*/
+    max-width: 400px;
+}
+
 /*parallax----------------------*/
 
 .keyart, .keyart_layer {
@@ -406,6 +425,7 @@ main {
 
 #keyart-1 {
     margin: 70px 10px 10px;
+    top: 230px;
     border: none;
     display: flex;
     justify-content: space-around;

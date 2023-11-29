@@ -27,6 +27,10 @@
         align-items: center;
     }
 
+    .cred-between > a {
+        font-size: 3vw;
+    }
+
 }
 
 
