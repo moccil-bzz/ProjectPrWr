@@ -209,8 +209,10 @@ function phoneNav(){
     let x = document.getElementById("phoneNavbar");
     if (x.style.opacity === "100") {
         x.style.opacity = "0";
+        x.style.pointerEvents = "none";
     } else {
         x.style.opacity = "100";
+        x.style.pointerEvents = "all";
     }
 }
 

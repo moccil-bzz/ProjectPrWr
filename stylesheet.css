@@ -298,6 +298,12 @@ header {
     height: 125px;
 }
 
+#menuLow {
+    flex: 0;
+    position: fixed;
+    z-index: 11;
+}
+
 #hamburgerBtn {
     background-color: #6C0E23;
     border: solid black 1px;
@@ -314,6 +320,9 @@ header {
     padding: 15px;
     opacity: 0;
     transition: .5s;
+    position: fixed;
+    top: 15px;
+    right: 15px;
 }
 
 #hamburgerBtn i {
@@ -342,6 +351,7 @@ header {
     top: 0;
     opacity: 0;
     transition: .3s;
+    pointer-events: none;
 }
 
 #phoneNavbar a {
