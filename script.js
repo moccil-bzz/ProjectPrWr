@@ -5,16 +5,22 @@ function content_loader(){
     document.getElementById("themeBtn-dark").addEventListener("click", changeThemeDark);
     document.getElementById("hamburgerBtn").addEventListener("click", phoneNav);
     document.getElementById("hamburgerBtnLow").addEventListener("click", phoneNav);
+
+    //-------------MARKOS STUFF START NO TOUCHYYY!!!!-------------//
+
+    let swiggity;
+    let swooty;
+    changer()
     addEventListener("resize", (event) => {
         let x = document.getElementById("phoneNavbar");
         if (window.innerWidth > 1170 && x.style.display === "flex") {
             x.style.display = "none";
         }
+        changer()
+        navSquisher(window.scrollY)
     });
     let header = document.querySelector(".header");
 
-
-    //-------------MARKOS STUFF START NO TOUCHYYY!!!!-------------//
     function checkScroll(scroller) {
         let hamburgerBtn = document.getElementById("hamburgerBtnLow");
         if (scroller >= 125) {
@@ -22,6 +28,17 @@ function content_loader(){
         } else {
             hamburgerBtn.style.opacity = "0"; // Adjust as needed
         }}
+
+    function changer() {
+        if (window.innerWidth <= 1350) {
+            swiggity = "15px";
+            swooty = "10px";
+        } else {
+            swiggity = "20px";
+            swooty = "15px";
+        };
+    };
+
     function castParallax() {
 
         let opThresh = 350;
@@ -96,13 +113,15 @@ function content_loader(){
     let isMouseOver = false;
     let naviTextList = document.querySelectorAll(".sticky-navBar a");
 
+
     // Add a mouseover event listener to the element
     naviTextList.forEach((i) => {
         i.addEventListener('mouseover', function() {
+
             // Set the boolean variable to true when mouseover occurs
             isMouseOver = true;
-            i.style.fontSize = "20px";
-            i.firstElementChild.style.padding = "15px";
+            i.style.fontSize = swiggity;
+            i.firstElementChild.style.padding = swooty;
             //console.log('Mouse over the element!');
         });
     });
@@ -114,6 +133,9 @@ function content_loader(){
             if (scrollTop >= 175) {
                 i.style.fontSize = "0"
                 i.firstElementChild.style.padding = "10px 50px";
+            } else {
+                i.style.fontSize = swiggity;
+                i.firstElementChild.style.padding = swooty;
             }
             isMouseOver = false;
             //console.log('Mouse out of the element!');
@@ -124,15 +146,16 @@ function content_loader(){
         let naviTextList = document.querySelectorAll(".sticky-navBar a");
         let navBar = document.querySelector(".sticky-navBar");
         //console.log(window.scrollY)
+        //console.log(window.innerWidth);
         naviTextList.forEach((i) => {
             if (scroller >= 175) {
                 i.style.fontSize = "0";
                 i.firstElementChild.style.padding = "10px 50px";
-                navBar.style.paddingLeft = "300px";
-                navBar.style.paddingRight = "300px";
+                navBar.style.paddingLeft = "230px";
+                navBar.style.paddingRight = "230px";
             } else {
-                i.style.fontSize = "20px";
-                i.firstElementChild.style.padding = "15px";
+                i.style.fontSize = swiggity;
+                i.firstElementChild.style.padding = swooty;
                 navBar.style.paddingLeft = "0";
                 navBar.style.paddingRight = "0";
             }
