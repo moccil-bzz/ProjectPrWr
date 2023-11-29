@@ -25,7 +25,7 @@ function content_loader(){
 
     addEventListener("resize", (event) => {
         let x = document.getElementById("phoneNavbar");
-        if (window.innerWidth > 1170 && x.style.display === "flex") {
+        if (window.innerWidth > 1170) {
             x.style.display = "none";
         }
         changer()
@@ -213,3 +213,6 @@ function phoneNav(){
         x.style.opacity = "100";
     }
 }
+
+
+//---------------implement header footer to other sites

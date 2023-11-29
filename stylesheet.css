@@ -16,7 +16,7 @@
 body {
     margin: 0;
     max-width: 100%;
-    min-height: 200vh;
+    min-height: 100vh;
     /*background-image: url("./img/wavy background transp 1.png");*/
     background-color: #ffffff;
     display: flex;
@@ -29,6 +29,7 @@ header {
     /*background-color: #6C0E23;*/
     height: 125px;
     display: flex;
+    overflow-y: hidden;
 }
 
 .bg-header {
@@ -98,7 +99,7 @@ header {
 
 #startBtn:hover {
     cursor: pointer;
-    background-color: #380714;
+    background-color: none;
 }
 
 .img-container {
@@ -137,7 +138,7 @@ header {
 }
 
 .navButtons:hover {
-    background-color: #380714;
+    background-color: none;
     cursor: pointer;
 }
 

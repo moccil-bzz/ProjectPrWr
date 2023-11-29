@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 1170px) {
     #dragon {
-        display: none;
+       display: none;
     }
     .extra-space {
         display: block;
