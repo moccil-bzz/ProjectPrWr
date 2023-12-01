@@ -138,13 +138,9 @@ header {
 }
 
 .navButtons:hover {
-    background-color: none;
     cursor: pointer;
 }
 
-.navButtons:hover > img {
-    transform: rotate(180deg);
-}
 
 .settings-cog {
     transform: rotate(0);
