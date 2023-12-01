@@ -17,6 +17,7 @@ function content_loader(){
     document.getElementById("themeBtn-dark").addEventListener("click", changeThemeDark);
     document.getElementById("hamburgerBtn").addEventListener("click", phoneNav);
     document.getElementById("hamburgerBtnLow").addEventListener("click", phoneNav);
+    hovering()
     navSquisher(window.scrollY)
 
     addEventListener("resize", (event) => {
@@ -215,4 +216,46 @@ function phoneNav(){
         x.style.opacity = "100";
         x.style.pointerEvents = "all";
     }
+}
+
+//---------------hovering settings btn------------//
+function hovering(){
+    let navButton = document.getElementsByClassName("navButtons")[0];
+    let dropdown = document.querySelector('.dropdown');
+    let dropdownContent = document.querySelector('.dropdown-content');
+    let cog = document.querySelectorAll('.settings-cog')[0];
+    let test = false;
+
+
+    navButton.addEventListener("mouseover", () => {
+        dropdownContent.style.top = '125px'
+        dropdownContent.style.opacity = '100%';
+        dropdownContent.style.boxShadow = '0 8px 16px 0 rgba(0,0,0,0.2)';
+        cog.style.transform = 'rotate(180deg)';
+        test = true;
+    })
+    navButton.addEventListener("click", () => {
+        if (!test) {
+            dropdownContent.style.top = '125px'
+            dropdownContent.style.opacity = '100%';
+            dropdownContent.style.boxShadow = '0 8px 16px 0 rgba(0,0,0,0.2)';
+            cog.style.transform = 'rotate(180deg)';
+            test = true;
+        } else {
+            dropdownContent.style.opacity = '0';
+            dropdownContent.style.top = '0';
+            cog.style.transform = 'rotate(0)';
+            cog.style.transition = '1';
+            test = false;
+        }
+    });
+    document.addEventListener('click', function(event) {
+        let isClickInside = dropdown.contains(event.target);
+        if (!isClickInside) {
+            dropdownContent.style.opacity = '0';
+            dropdownContent.style.top = '0';
+            cog.style.transform = 'rotate(0)';
+            cog.style.transition = '1';
+        }
+    });
 }
