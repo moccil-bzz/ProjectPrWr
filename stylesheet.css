@@ -231,8 +231,10 @@ header {
     display: block;
 }
 
+
 .dropdown-theme {
     position: relative;
+
 }
 
 .dropdown-content-theme {
@@ -284,11 +286,13 @@ header {
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+    transition: 0.2s;
 }
 
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    transition: 0.2s;
 }
 
 /*Hamburger Menu---------------------*/

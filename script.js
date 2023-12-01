@@ -166,6 +166,29 @@ function content_loader(){
             }
         })
     }
+
+    let isMouseOver2 = false;
+    let dropdownBtns = document.querySelectorAll(".dropdown-theme");
+    let lefts = document.querySelectorAll(".left");
+
+    dropdownBtns.forEach((i) => {
+        i.addEventListener('mouseover', function() {
+            isMouseOver2 = true;
+            lefts.forEach((x) => {
+                x.style.transform = "rotate(-45deg)";
+            })
+        });
+    });
+
+    dropdownBtns.forEach((i) => {
+        i.addEventListener('mouseout', function() {
+            isMouseOver2 = false;
+            lefts.forEach((x) => {
+                x.style.transform = "rotate(135deg)";
+            })
+        });
+    });
+
 document.body.onload = startSite();
 
 //-------------MARKOS STUFF END NO TOUCHYYY!!!!-------------//
