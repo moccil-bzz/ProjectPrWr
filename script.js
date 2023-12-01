@@ -19,18 +19,17 @@ function content_loader(){
     document.getElementById("hamburgerBtnLow").addEventListener("click", phoneNav);
     navSquisher(window.scrollY)
 
-
-    //-------------MARKOS STUFF START NO TOUCHYYY!!!!-------------//
-
-
     addEventListener("resize", (event) => {
         let x = document.getElementById("phoneNavbar");
         if (window.innerWidth > 1170) {
             x.style.display = "none";
+        } else {
+            x.style.display = "flex";
         }
         changer()
         navSquisher(window.scrollY)
     });
+    //-------------MARKOS STUFF START NO TOUCHYYY!!!!-------------//
     let header = document.querySelector(".header");
 
     function checkScroll(scroller) {
@@ -217,6 +216,3 @@ function phoneNav(){
         x.style.pointerEvents = "all";
     }
 }
-
-
-//---------------implement header footer to other sites
