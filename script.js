@@ -37,8 +37,10 @@ function content_loader(){
         let hamburgerBtn = document.getElementById("hamburgerBtnLow");
         if (scroller >= 91) {
             hamburgerBtn.style.opacity = "100";
+            hamburgerBtn.style.pointerEvents = "All";
         } else {
             hamburgerBtn.style.opacity = "0"; // Adjust as needed
+            hamburgerBtn.style.pointerEvents = "None";
         }}
 
 

@@ -377,13 +377,32 @@ main {
     top: 300px;
     /*border: solid red 1px;*/
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     left: 40%;
     right: 40%;
     margin: auto;
 }
 
-.cred-between > a {
+#credits-left {
+    width: 7.7vw;
+    height: auto;
+}
+
+#credits-right {
+    width: 7.7vw;
+    height: auto;
+}
+
+.betw-1 {
+    text-align: center;
+    font-family: go3v2, serif;
+    font-size: 40px;
+    /*border: solid black 1px;*/
+    max-width: 400px;
+}
+.betw-2 {
+    margin-top: 30px;
     text-align: center;
     font-family: go3v2, serif;
     font-size: 40px;
