@@ -15,8 +15,42 @@ changer()
 function content_loader(){
     document.getElementById("themeBtn-light").addEventListener("click", changeThemeLight);
     document.getElementById("themeBtn-dark").addEventListener("click", changeThemeDark);
+    document.getElementById("lightThemeBtn").addEventListener("click", changeThemeLight);
+    document.getElementById("darkThemeBtn").addEventListener("click", changeThemeDark);
     document.getElementById("hamburgerBtn").addEventListener("click", phoneNav);
     document.getElementById("hamburgerBtnLow").addEventListener("click", phoneNav);
+    let checker = false;
+    document.getElementById("topicBtn").addEventListener("click", () => {
+        checker = !checker
+        console.log(checker)
+        if (checker === true) {
+            document.querySelectorAll(".hidden").forEach((i) => {
+                i.classList.remove("hidden");
+                i.classList.add("shown");
+                });
+        } else {
+            document.querySelectorAll(".shown").forEach((i) => {
+                i.classList.remove("shown");
+                i.classList.add("hidden");
+            });
+        }
+    });
+    let checkerSettings = false;
+    document.getElementById("settingsBtn").addEventListener("click", () => {
+        checkerSettings = !checkerSettings
+        console.log(checkerSettings)
+        if (checkerSettings === true) {
+            document.querySelectorAll(".hiddenSet").forEach((i) => {
+                i.classList.remove("hiddenSet");
+                i.classList.add("shownSet");
+            });
+        } else {
+            document.querySelectorAll(".shownSet").forEach((i) => {
+                i.classList.remove("shownSet");
+                i.classList.add("hiddenSet");
+            });
+        }
+    });
     hovering()
     navSquisher(window.scrollY)
 
@@ -202,6 +236,10 @@ function changeThemeLight() {
         i.classList.remove("dropdown-darkTheme");
         i.classList.add("dropdown-lightTheme");
     });
+    document.querySelectorAll(".fontColorDark").forEach((i) => {
+        i.classList.remove("fontColorDark");
+        i.classList.add("fontColorLight");
+    });
     document.querySelectorAll(".arrowColorDark").forEach((i) => {
         i.classList.remove("arrowColorDark");
         i.classList.add("arrowColorLight");
@@ -215,6 +253,10 @@ function changeThemeDark() {
     document.querySelectorAll(".dropdown-lightTheme").forEach((i) => {
         i.classList.remove("dropdown-lightTheme")
         i.classList.add("dropdown-darkTheme");
+    });
+    document.querySelectorAll(".fontColorLight").forEach((i) => {
+        i.classList.remove("fontColorLight");
+        i.classList.add("fontColorDark");
     });
     document.querySelectorAll(".arrowColorLight").forEach((i) => {
         i.classList.remove("arrowColorLight");
