@@ -15,42 +15,8 @@ changer()
 function content_loader(){
     document.getElementById("themeBtn-light").addEventListener("click", changeThemeLight);
     document.getElementById("themeBtn-dark").addEventListener("click", changeThemeDark);
-    document.getElementById("lightThemeBtn").addEventListener("click", changeThemeLight);
-    document.getElementById("darkThemeBtn").addEventListener("click", changeThemeDark);
     document.getElementById("hamburgerBtn").addEventListener("click", phoneNav);
     document.getElementById("hamburgerBtnLow").addEventListener("click", phoneNav);
-    let checker = false;
-    document.getElementById("topicBtn").addEventListener("click", () => {
-        checker = !checker
-        console.log(checker)
-        if (checker === true) {
-            document.querySelectorAll(".hidden").forEach((i) => {
-                i.classList.remove("hidden");
-                i.classList.add("shown");
-                });
-        } else {
-            document.querySelectorAll(".shown").forEach((i) => {
-                i.classList.remove("shown");
-                i.classList.add("hidden");
-            });
-        }
-    });
-    let checkerSettings = false;
-    document.getElementById("settingsBtn").addEventListener("click", () => {
-        checkerSettings = !checkerSettings
-        console.log(checkerSettings)
-        if (checkerSettings === true) {
-            document.querySelectorAll(".hiddenSet").forEach((i) => {
-                i.classList.remove("hiddenSet");
-                i.classList.add("shownSet");
-            });
-        } else {
-            document.querySelectorAll(".shownSet").forEach((i) => {
-                i.classList.remove("shownSet");
-                i.classList.add("hiddenSet");
-            });
-        }
-    });
     hovering()
     navSquisher(window.scrollY)
 
@@ -120,7 +86,7 @@ function content_loader(){
             checkScroll(scrollTop)
             navSquisher(scrollTop)
         });
-}
+    }
     function dispelParallax() {
         $("#nonparallax").css('display','block');
         $("#parallax").css('display','none');
@@ -201,45 +167,107 @@ function content_loader(){
             }
         })
     }
-document.body.onload = startSite();
+
+    let isMouseOverJoe = false;
+    let isMouseOverMama = false;
+    let isMouseOverSet = false;
+    let sBtn = document.getElementById("settingsBtn");
+    let dBu = document.getElementById("joe");
+    console.log(dBu)
+    let dBd = document.getElementById("mama");
+    console.log(dBd)
+
+    dBu.addEventListener('mouseover', function() {
+        console.log("JOOOO")
+        let anchor = dBu.querySelector("a");
+        let lefts = anchor.querySelectorAll(".left");
+        isMouseOverJoe = true;
+        lefts.forEach((x) => {
+            x.style.transform = "rotate(-45deg)";
+        })
+    });
+
+    dBd.addEventListener('mouseover', function() {
+        console.log("JOOOO")
+        let anchor = dBd.querySelector("a");
+        let lefts = anchor.querySelectorAll(".left");
+        isMouseOverMama = true;
+        lefts.forEach((x) => {
+            x.style.transform = "rotate(-45deg)";
+        })
+    });
+    /*
+    sBtn.addEventListener('mouseover', function() {
+        console.log("EEEEE")
+        let downs = sBtn.querySelectorAll(".down");
+        isMouseOverSet = true;
+        downs.forEach((x) => {
+            x.style.transform = "rotate(-135deg)";
+        })
+    });
+
+     */
+
+    dBu.addEventListener('mouseout', function() {
+        let anchor = dBu.querySelector("a");
+        let lefts = anchor.querySelectorAll(".left");
+        isMouseOverJoe = false;
+        lefts.forEach((x) => {
+            x.style.transform = "rotate(135deg)";
+        })
+    });
+
+    dBd.addEventListener('mouseout', function() {
+        let anchor = dBd.querySelector("a");
+        let lefts = anchor.querySelectorAll(".left");
+        isMouseOverMama = false;
+        lefts.forEach((x) => {
+            x.style.transform = "rotate(135deg)";
+        })
+    });
+    /*
+    sBtn.addEventListener('mouseout', function() {
+        console.log("OOOOOO")
+        let downs = sBtn.querySelectorAll(".down");
+        isMouseOverSet = false;
+        downs.forEach((x) => {
+            x.style.transform = "rotate(45deg)";
+        })
+    });
+
+     */
+
+    document.body.onload = startSite();
 
 //-------------MARKOS STUFF END NO TOUCHYYY!!!!-------------//
 
-function changeThemeLight() {
-    document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-    document.getElementById("credits-left").src = './img/credits%20left%20transp%201%20og.png';
-    document.getElementById("credits-right").src = './img/credits%20right%20transp%201%20og.png';
-    document.querySelectorAll(".dropdown-darkTheme").forEach((i) => {
-        i.classList.remove("dropdown-darkTheme");
-        i.classList.add("dropdown-lightTheme");
-    });
-    document.querySelectorAll(".fontColorDark").forEach((i) => {
-        i.classList.remove("fontColorDark");
-        i.classList.add("fontColorLight");
-    });
-    document.querySelectorAll(".arrowColorDark").forEach((i) => {
-        i.classList.remove("arrowColorDark");
-        i.classList.add("arrowColorLight");
-    });
-}
+    function changeThemeLight() {
+        document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+        document.getElementById("credits-left").src = './img/credits%20left%20transp%201%20og.png';
+        document.getElementById("credits-right").src = './img/credits%20right%20transp%201%20og.png';
+        document.querySelectorAll(".dropdown-darkTheme").forEach((i) => {
+            i.classList.remove("dropdown-darkTheme");
+            i.classList.add("dropdown-lightTheme");
+        });
+        document.querySelectorAll(".arrowColorDark").forEach((i) => {
+            i.classList.remove("arrowColorDark");
+            i.classList.add("arrowColorLight");
+        });
+    }
 
-function changeThemeDark() {
-    document.getElementsByTagName("body")[0].style.backgroundColor = "#1F1F1FFF";
-    document.getElementById("credits-left").src = './img/credits%20left%20transp%20og%201%20dm.png';
-    document.getElementById("credits-right").src = './img/credits%20right%20transp%20og%201%20dm.png';
-    document.querySelectorAll(".dropdown-lightTheme").forEach((i) => {
-        i.classList.remove("dropdown-lightTheme")
-        i.classList.add("dropdown-darkTheme");
-    });
-    document.querySelectorAll(".fontColorLight").forEach((i) => {
-        i.classList.remove("fontColorLight");
-        i.classList.add("fontColorDark");
-    });
-    document.querySelectorAll(".arrowColorLight").forEach((i) => {
-        i.classList.remove("arrowColorLight");
-        i.classList.add("arrowColorDark");
-    });
-}
+    function changeThemeDark() {
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#1F1F1FFF";
+        document.getElementById("credits-left").src = './img/credits%20left%20transp%20og%201%20dm.png';
+        document.getElementById("credits-right").src = './img/credits%20right%20transp%20og%201%20dm.png';
+        document.querySelectorAll(".dropdown-lightTheme").forEach((i) => {
+            i.classList.remove("dropdown-lightTheme")
+            i.classList.add("dropdown-darkTheme");
+        });
+        document.querySelectorAll(".arrowColorLight").forEach((i) => {
+            i.classList.remove("arrowColorLight");
+            i.classList.add("arrowColorDark");
+        });
+    }
 
 
 
@@ -262,6 +290,8 @@ function phoneNav(){
 
 //---------------hovering settings btn------------//
 function hovering(){
+    let sBtn = document.getElementById("settingsBtn");
+    let downs = sBtn.querySelectorAll(".down");
     let navButton = document.getElementsByClassName("navButtons")[0];
     let dropdown = document.querySelector('.dropdown');
     let dropdownContent = document.querySelector('.dropdown-content');
@@ -275,6 +305,9 @@ function hovering(){
         dropdownContent.style.boxShadow = '0 8px 16px 0 rgba(0,0,0,0.2)';
         cog.style.transform = 'rotate(180deg)';
         test = true;
+        downs.forEach((x) => {
+            x.style.transform = "rotate(-135deg)";
+        })
     })
     navButton.addEventListener("click", () => {
         if (!test) {
@@ -283,12 +316,18 @@ function hovering(){
             dropdownContent.style.boxShadow = '0 8px 16px 0 rgba(0,0,0,0.2)';
             cog.style.transform = 'rotate(180deg)';
             test = true;
+            downs.forEach((x) => {
+                x.style.transform = "rotate(-135deg)";
+            })
         } else {
             dropdownContent.style.opacity = '0';
             dropdownContent.style.top = '0';
             cog.style.transform = 'rotate(0)';
             cog.style.transition = '1';
             test = false;
+            downs.forEach((x) => {
+                x.style.transform = "rotate(45deg)";
+            })
         }
     });
     document.addEventListener('click', function(event) {
@@ -298,6 +337,9 @@ function hovering(){
             dropdownContent.style.top = '0';
             cog.style.transform = 'rotate(0)';
             cog.style.transition = '1';
+            downs.forEach((x) => {
+                x.style.transform = "rotate(45deg)";
+            })
         }
     });
 }

@@ -24,15 +24,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.fontColorDark {
-    color: white
-}
-
-.fontColorLight {
-    color: black
-}
-
-
 /*header--------------------------*/
 header {
     /*background-color: #6C0E23;*/
@@ -236,8 +227,17 @@ header {
     display: block;
 }
 
+
 .dropdown-theme {
     position: relative;
+}
+
+#joe {
+
+}
+
+#mama {
+
 }
 
 .dropdown-content-theme {
@@ -289,11 +289,13 @@ header {
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+    transition: 0.2s;
 }
 
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    transition: 0.2s;
 }
 
 /*Hamburger Menu---------------------*/
@@ -369,23 +371,6 @@ header {
 
 #phoneNavbar a:hover {
     background-color: #6C0E23;
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-.shown {
-    display: block;
-}
-
-.hiddenSet {
-    display: none;
-}
-
-.shownSet {
-    display: block;
 }
 
 /*main---------------------------*/
