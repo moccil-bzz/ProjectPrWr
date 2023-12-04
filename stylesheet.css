@@ -24,15 +24,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.fontColorDark {
-    color: white
-}
-
-.fontColorLight {
-    color: black
-}
-
-
 /*header--------------------------*/
 header {
     /*background-color: #6C0E23;*/
@@ -239,6 +230,13 @@ header {
 
 .dropdown-theme {
     position: relative;
+}
+
+#joe {
+
+}
+
+#mama {
 
 }
 
@@ -373,23 +371,6 @@ header {
 
 #phoneNavbar a:hover {
     background-color: #6C0E23;
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-.shown {
-    display: block;
-}
-
-.hiddenSet {
-    display: none;
-}
-
-.shownSet {
-    display: block;
 }
 
 /*main---------------------------*/
