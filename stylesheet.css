@@ -24,6 +24,13 @@ body {
     background-repeat: no-repeat;
 }
 
+.fontColorLight {
+    color: black;
+}
+
+.fontColorDark {
+    color: white;
+}
 /*header--------------------------*/
 header {
     /*background-color: #6C0E23;*/
@@ -371,6 +378,7 @@ header {
 
 #phoneNavbar a:hover {
     background-color: #6C0E23;
+    cursor: pointer;
 }
 
 /*main---------------------------*/
@@ -415,6 +423,22 @@ main {
     font-size: 40px;
     /*border: solid black 1px;*/
     max-width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+.hiddenSet {
+    display: none;
+}
+
+.shownSet {
+    display: block;
 }
 
 /*parallax----------------------*/

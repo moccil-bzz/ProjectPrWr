@@ -15,8 +15,42 @@ changer()
 function content_loader(){
     document.getElementById("themeBtn-light").addEventListener("click", changeThemeLight);
     document.getElementById("themeBtn-dark").addEventListener("click", changeThemeDark);
+    document.getElementById("lightThemeBtn").addEventListener("click", changeThemeLight);
+    document.getElementById("darkThemeBtn").addEventListener("click", changeThemeDark);
     document.getElementById("hamburgerBtn").addEventListener("click", phoneNav);
     document.getElementById("hamburgerBtnLow").addEventListener("click", phoneNav);
+    let checker = false;
+    document.getElementById("topicBtn").addEventListener("click", () => {
+        if (!checker) {
+            document.querySelectorAll(".hidden").forEach((i) => {
+                i.classList.remove("hidden");
+                i.classList.add("shown");
+            });
+            checker = true;
+        } else {
+            document.querySelectorAll(".shown").forEach((i) => {
+                i.classList.remove("shown");
+                i.classList.add("hidden");
+            });
+            checker = false;
+        }
+    });
+    let checkerSet = false;
+    document.getElementById("settingsBtnHam").addEventListener("click", () => {
+        if (!checkerSet) {
+            document.querySelectorAll(".hiddenSet").forEach((i) => {
+                i.classList.remove("hiddenSet");
+                i.classList.add("shownSet");
+            });
+            checkerSet = true;
+        } else {
+            document.querySelectorAll(".shownSet").forEach((i) => {
+                i.classList.remove("shownSet");
+                i.classList.add("hiddenSet");
+            });
+            checkerSet = false;
+        }
+    });
     hovering()
     navSquisher(window.scrollY)
 
@@ -253,6 +287,10 @@ function content_loader(){
             i.classList.remove("arrowColorDark");
             i.classList.add("arrowColorLight");
         });
+        document.querySelectorAll(".fontColorDark").forEach((i) => {
+            i.classList.remove("fontColorDark");
+            i.classList.add("fontColorLight");
+        });
     }
 
     function changeThemeDark() {
@@ -266,6 +304,10 @@ function content_loader(){
         document.querySelectorAll(".arrowColorLight").forEach((i) => {
             i.classList.remove("arrowColorLight");
             i.classList.add("arrowColorDark");
+        });
+        document.querySelectorAll(".fontColorLight").forEach((i) => {
+            i.classList.remove("fontColorLight");
+            i.classList.add("fontColorDark");
         });
     }
 
@@ -341,5 +383,12 @@ function hovering(){
                 x.style.transform = "rotate(45deg)";
             })
         }
+    });
+}
+
+function shower() {
+    document.querySelectorAll(".hidden").forEach((i) => {
+        i.classList.remove("hidden");
+        i.classList.add("shown");
     });
 }
