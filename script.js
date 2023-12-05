@@ -26,6 +26,7 @@ function content_loader(){
                 i.classList.remove("hidden");
                 i.classList.add("shown");
             });
+            document.getElementById("topicBtn").querySelector("i").style.transform = "rotate(-135deg)";
             checker = true;
         } else {
             document.querySelectorAll(".shown").forEach((i) => {
@@ -33,6 +34,7 @@ function content_loader(){
                 i.classList.add("hidden");
             });
             checker = false;
+            document.getElementById("topicBtn").querySelector("i").style.transform = "rotate(45deg)";
         }
     });
     let checkerSet = false;
@@ -43,12 +45,14 @@ function content_loader(){
                 i.classList.add("shownSet");
             });
             checkerSet = true;
+            document.getElementById("settingsBtnHam").querySelector("i").style.transform = "rotate(-135deg)";
         } else {
             document.querySelectorAll(".shownSet").forEach((i) => {
                 i.classList.remove("shownSet");
                 i.classList.add("hiddenSet");
             });
             checkerSet = false;
+            document.getElementById("settingsBtnHam").querySelector("i").style.transform = "rotate(45deg)";
         }
     });
     hovering()
