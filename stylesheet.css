@@ -387,6 +387,11 @@ main {
     flex: 1;
 }
 
+.title {
+    font-weight: bolder;
+    font-size: 32px;
+}
+
 .cred-between {
     position: absolute;
     top: 300px;
@@ -555,7 +560,6 @@ main {
 
 .text-block {
     display: block;
-    /*border: red solid;*/
     position: relative;
     font-family: hanyi, serif;
     font-size: 160%;
