@@ -27,14 +27,16 @@ function content_loader(){
                 i.classList.add("shown");
             });
             document.getElementById("topicBtn").querySelector("i").style.transform = "rotate(-135deg)";
+            document.getElementById("topicBtn").style.backgroundColor = "A61B32FF";
             checker = true;
         } else {
             document.querySelectorAll(".shown").forEach((i) => {
                 i.classList.remove("shown");
                 i.classList.add("hidden");
             });
-            checker = false;
             document.getElementById("topicBtn").querySelector("i").style.transform = "rotate(45deg)";
+            document.getElementById("topicBtn").style.backgroundColor = "380714FF";
+            checker = false;
         }
     });
     let checkerSet = false;
