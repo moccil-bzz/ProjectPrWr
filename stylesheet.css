@@ -358,7 +358,7 @@ header {
 #phoneNavbar {
     margin-top: 40px;
     display: flex;
-    background-color: red;
+    background-color: #600d24;
     flex-direction: column;
     position: sticky;
     z-index: 10;
@@ -377,8 +377,15 @@ header {
 }
 
 #phoneNavbar a:hover {
-    background-color: #6C0E23;
+    background-color: #83122b;
     cursor: pointer;
+    transition: .1s;
+    padding-left: 30px;
+}
+
+/*---ID of whatever topic/page you are on for the phone nav. Just assign the id to it in the html file*/
+#hidden-phone {
+    background-color: #a21634;
 }
 
 /*main---------------------------*/
