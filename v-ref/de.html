@@ -10,7 +10,7 @@
   <script src="../script.js"></script>
 </head>
 <body>
-<header>
+<header id="header">
   <div class='bg-header'>
     <img src='../img/idaf%20prwr%20wgcwzwm%20top%20navbar%202.png' alt='A cool navbar background is meant to be here...'>
   </div>
@@ -30,17 +30,17 @@
     </div>
     <div class="navBtn-container">
       <div class="dropdown">
-        <button class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> settings <i class="arrowNavbar down"></i></button>
+        <button id="settingsBtn" class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> Einstellungen <i class="arrowNavbar down"></i></button>
         <div class="dropdown-content dropdown-lightTheme">
-          <div class="dropdown-theme">
-            <a href="#"><i class="arrowDropdown arrowColorLight left"></i> Sprache</a>
+          <div id="joe" class="dropdown-theme">
+            <a><i class="arrowDropdown arrowColorLight left"></i> Sprache</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
-              <a href="#">English</a>
-              <a href="#">Deutsch</a>
+              <a href="./en.html">English</a>
+              <a href="./de.html">Deutsch</a>
             </div>
           </div>
-          <div class="dropdown-theme">
-            <a href="#"><i class="arrowDropdown arrowColorLight left"></i> Theme</a>
+          <div id="mama" class="dropdown-theme">
+            <a href="#"><i class="arrowDropdown arrowColorLight left"></i> Modus</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
               <a id="themeBtn-light">Hell</a>
               <a id="themeBtn-dark">Dunkel</a>
@@ -60,16 +60,26 @@
   </div>
 </header>
 <div class="sticky-navBar">
-  <a href="./en.html"><div class="pg-nav-but" id='active-page'>China bevor Reformen</div></a>
-  <a href='../e-ref/e-ref.html'><div class="pg-nav-but">Einleitung von Reformen</div></a>
-  <a href='../n-ref/n-ref.html'><div class="pg-nav-but">Entwicklungen nach den Reformen</div></a>
-  <a href='../heute/heute.html'><div class="pg-nav-but">Heutige wirtschaftliche Situation</div></a>
+  <a href="../v-ref/de.html"><div class="pg-nav-but">China bevor Reform</div></a>
+  <a href="../e-ref/e-ref.html"><div class="pg-nav-but">Einleitung von Reformen</div></a>
+  <a href="../n-ref/n-ref.html"><div class="pg-nav-but">Entwicklungen nach den Reformen</div></a>
+  <a href="../heute.html"><div class="pg-nav-but">Heutige wirtschaftliche Situation</div></a>
   <a href="../quiz.html"><div class="pg-nav-but">Quiz</div></a>
 </div>
 <div id="phoneNavbar">
-  <a href="#">Topic</a>
-  <a href="#">etwas</a>
-  <a href="#">Quiz</a>
+  <a id="topicBtn">Themen <i class="arrowNavbar down"></i></a>
+  <div>
+    <a href="../v-ref/de.html" class="hidden">\\\China bevor Reform</a>
+    <a href="../e-ref/e-ref.html" class="hidden">\\\Einleitung von Reformen</a>
+    <a href="../n-ref/n-ref.html" class="hidden">\\\Entwicklungen nach den Reformen</a>
+    <a href="../heute.html" class="hidden">\\\Heutige wirtschaftliche Situation</a>
+  </div>
+  <a id="settingsBtnHam">Einstellungen <i class="arrowNavbar down"></i></a>
+  <div>
+    <a class="hiddenSet" id="lightThemeBtn">\\\Hell Modus</a>
+    <a class="hiddenSet" id="darkThemeBtn">\\\Dunkel Modus</a>
+  </div>
+  <a href="../quiz.html">Quiz</a>
 </div>
 <main>
   <div class="hamburgerMenu">
@@ -80,12 +90,19 @@
   </div>
   <div class="segment-1">
     <div class="intro-chi-div">
-      <img class="intro-chi" src="../img/beginnings%201.png">
+      <img class="intro-chi" src="../img/beginnings_1_bl.png">
     </div>
     <div class="text-block">
-      <a class="text-block-text">Under the leadership of Mao Zedong, China operated a planned economy in which a large part of the economy was controlled by the state. Prices were determined, production targets set, and resources allocated. The economy focused on self-sufficiency; products were only imported from other countries if they could not be produced or obtained domestically. Key initiatives included the collectivization of farms into communes and state-sponsored industrialization. However, all these policies led to a lack of incentive for companies, workers, and farmers to care about the quality of their products. Instead, they were solely focused on meeting production targets.
+      <a class="fontColorLight">
+        <span class="title">China bevor den ökonomischen Reformen</span>
+        <p>
+          Unter der Leitung von Mao Zedong betrieb China eine Planwirtschaft, in der ein grosser Teil der Ökonomie vom Staat kontrolliert wurde. Die Preise wurden bestimmt, Produktionsziele gesetzt und Ressourcen verteilt. Die Wirtschaft konzentrierte sich auf Selbstversorgung; Produkte wurden nur aus anderen Ländern importiert, wenn sie nicht selbst hergestellt oder beschafft werden konnten. Wichtige Initiativen waren die Kollektivierung der Bauernhöfe in Kommunen und die staatlich geförderte Industrialisierung. All diese Richtlinien führten jedoch dazu, dass es für Firmen, Arbeiter und Bauern keinen Anreiz gab, sich um die Qualität ihrer Produkte zu kümmern. Stattdessen waren sie nur darauf fokussiert, die Produktionsziele zu erreichen.
 
-        China suffered from significant economic difficulties, especially during the "Great Leap Forward" (a failed campaign by Mao Zedong to catch up with Western countries) from 1958 to 1962, which also triggered a famine that resulted in the deaths of up to 45 million people. The standard of living dropped by 20.3% during this period. Compared to countries like Japan, the growth of the standard of living was very low. In 1978, after the death of Mao Zedong in 1976, China began to liberalize its market and open up trade with the West, hoping this would promote economic growth and improve living standards. Deng Xiaoping, who held the role of "paramount leader," initiated these reforms.</a>
+        </p>
+        <p>
+          China litt unter grossen ökonomischen Schwierigkeiten, insbesondere während des «大跃进» („Grossen Sprungs nach vorn“, einer gescheiterten Kampagne von Mao Zedong, um den Rückstand zu den westlichen Ländern aufzuholen) von 1958 bis 1962, bei der auch eine Hungersnot ausbrach und bis zu 45 Millionen Menschen starben. Der Lebensstandard fiel während dieser Zeit um 20,3%. Im Vergleich zu Ländern wie Japan war das Wachstum des Lebensstandards ohnehin sehr niedrig. 1978, nach dem Tod von Mao Zedong im Jahr 1976, begann China, ihren Markt zu liberalisieren und den Handel mit dem Westen zu öffnen, in der Hoffnung, dass dies das wirtschaftliche Wachstum und den Lebensstandard fördern würde. Deng Xiaoping der die Rolle als «Überragenden Führers» hatte, leitete diese Reformen ein.
+        </p>
+      </a>
     </div>
   </div>
 </main>

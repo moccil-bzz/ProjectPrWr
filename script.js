@@ -283,8 +283,15 @@ function content_loader(){
 
     function changeThemeLight() {
         document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-        document.getElementById("credits-left").src = './img/credits%20left%20transp%201%20og.png';
-        document.getElementById("credits-right").src = './img/credits%20right%20transp%201%20og.png';
+        if (document.getElementById("credits-left")) {
+            document.getElementById("credits-left").src = './img/credits%20left%20transp%201%20og.png';
+        }
+        if (document.getElementById("credits-right")) {
+            document.getElementById("credits-right").src = './img/credits%20right%20transp%201%20og.png';
+        }
+        if (document.getElementById("beginningsImg")){
+            document.getElementById("beginningsImg").src = '../img/beginnings_1_bl.png';
+        }
         document.querySelectorAll(".dropdown-darkTheme").forEach((i) => {
             i.classList.remove("dropdown-darkTheme");
             i.classList.add("dropdown-lightTheme");
@@ -301,8 +308,15 @@ function content_loader(){
 
     function changeThemeDark() {
         document.getElementsByTagName("body")[0].style.backgroundColor = "#1F1F1FFF";
-        document.getElementById("credits-left").src = './img/credits%20left%20transp%20og%201%20dm.png';
-        document.getElementById("credits-right").src = './img/credits%20right%20transp%20og%201%20dm.png';
+        if (document.getElementById("credits-left")){
+            document.getElementById("credits-left").src = './img/credits%20left%20transp%20og%201%20dm.png';
+        }
+        if (document.getElementById("credits-right")){
+            document.getElementById("credits-right").src = './img/credits%20right%20transp%20og%201%20dm.png';
+        }
+        if (document.getElementById("beginningsImg")){
+            document.getElementById("beginningsImg").src = '../img/beginnings_1_wh.png';
+        }
         document.querySelectorAll(".dropdown-lightTheme").forEach((i) => {
             i.classList.remove("dropdown-lightTheme")
             i.classList.add("dropdown-darkTheme");
@@ -389,12 +403,5 @@ function hovering(){
                 x.style.transform = "rotate(45deg)";
             })
         }
-    });
-}
-
-function shower() {
-    document.querySelectorAll(".hidden").forEach((i) => {
-        i.classList.remove("hidden");
-        i.classList.add("shown");
     });
 }
