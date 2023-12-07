@@ -16,12 +16,15 @@
 body {
     margin: 0;
     max-width: 100%;
-    min-height: 100vh;
     /*background-image: url("./img/wavy background transp 1.png");*/
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
+}
+
+#venb {
+    height: 3000px;
 }
 
 .fontColorLight {
@@ -150,8 +153,10 @@ header {
 
 
 .settings-cog {
+    position: relative;
     transform: rotate(0);
     transition: 1s;
+    top: 7px;
 }
 
 .extra-space {
@@ -550,9 +555,36 @@ main {
     display: flex;
     position: absolute;
     left: 10%;
-    top: 30%;
+    top: 300px;
     /*border: pink solid;*/
     margin-right: 10%;
+}
+
+.segment-2 {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 900px;
+    /*border: pink solid;*/
+    margin-right: 50%;
+}
+
+.segment-3 {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 1500px;
+    /*border: pink solid;*/
+    margin-right: 50%;
+}
+
+.segment-4 {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 2100px;
+    /*border: pink solid;*/
+    margin-right: 50%;
 }
 
 .intro-chi-div {
@@ -570,7 +602,7 @@ main {
     display: block;
     position: relative;
     font-family: hanyi, serif;
-    font-size: 160%;
+    font-size: 200%;
 }
 
 /*footer-------------------------*/

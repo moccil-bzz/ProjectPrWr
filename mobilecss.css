@@ -31,6 +31,17 @@
         font-size: 3vw;
     }
 
+    .segment-3 {
+        top: 1600px;
+    }
+
+    .segment-4 {
+        top: 2400px;
+    }
+
+    #venb {
+        height: 3200px;
+    }
 }
 
 
@@ -49,7 +60,22 @@
     }
     .segment-1 {
         left: 5%;
-
+        top: 30%;
+        margin-right: 5%;
+    }
+    .segment-2 {
+        left: 5%;
+        top: 60%;
+        margin-right: 5%;
+    }
+    .segment-3 {
+        left: 5%;
+        top: 110%;
+        margin-right: 5%;
+    }
+    .segment-4 {
+        left: 5%;
+        top: 170%;
         margin-right: 5%;
     }
     .intro-chi {
@@ -57,5 +83,17 @@
     }
     .text-block {
         font-size: 3vw;
+    }
+    .segment-2 > .text-block {
+        font-size: 5vw;
+    }
+    .segment-3 > .text-block {
+        font-size: 5vw;
+    }
+    .segment-4 > .text-block {
+        font-size: 5vw;
+    }
+    #venb {
+        height: 2200px;
     }
 }
