@@ -16,19 +16,30 @@
 body {
     margin: 0;
     max-width: 100%;
-    min-height: 200vh;
-    background-image: url("./img/wavy background transp 1.png");
+    /*background-image: url("./img/wavy background transp 1.png");*/
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
 }
 
+#venb {
+    height: 3000px;
+}
+
+.fontColorLight {
+    color: black;
+}
+
+.fontColorDark {
+    color: white;
+}
 /*header--------------------------*/
 header {
     /*background-color: #6C0E23;*/
     height: 125px;
     display: flex;
+    overflow-y: hidden;
 }
 
 .bg-header {
@@ -56,6 +67,8 @@ header {
 
 #startBtn {
     flex: 1;
+    position: relative;
+    overflow: hidden;
     border: solid black 0;
     padding: 20px;
     font-family: go3v2, serif;
@@ -64,11 +77,39 @@ header {
     background-color: #6C0E23;
     cursor: pointer;
     text-align: center;
+    transition: .1s;
+    justify-content: center;
+    justify-items: center;
+}
+
+#background-image-st-bt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./img/idaf prwr wgcwzwm home button ch text.png");
+    background-size: auto 75px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+    transition: 1s;
+    z-index: 1;
+}
+
+#startBtn:hover #background-image-st-bt {
+    opacity: 50%;
+    background-size: auto 100px;
+}
+
+#st-bt-text {
+    position: relative;
+    z-index: 2;
 }
 
 #startBtn:hover {
     cursor: pointer;
-    background-color: #380714;
+    background-color: none;
 }
 
 .img-container {
@@ -102,19 +143,36 @@ header {
     font-family: go3v2, serif;
     font-size: 20px;
     border: solid black 0;
-    z-index: 3;
+    z-index: 151;
     transition: .1s;
 }
 
 .navButtons:hover {
-    background-color: #380714;
     cursor: pointer;
+}
+
+
+.settings-cog {
+    position: relative;
+    transform: rotate(0);
+    transition: 1s;
+    top: 7px;
+}
+
+.extra-space {
+    display: none;
+    flex: 3;
+    background-color: #6C0E23;
+    z-index: 10;
+    height: 125px;
 }
 
 /*dropdown nav--------------------------*/
 .dropdown:hover .dropdown-content {
     display: block;
     top: 125px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    opacity: 100%;
 }
 
 .dropdown > button {
@@ -127,10 +185,11 @@ header {
 
 .dropdown-content {
     display: block;
+    opacity: 0;
     position: absolute;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 2;
+    min-width: 150px;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+    z-index: 150;
     top: 0;
     transition: .2s;
 }
@@ -172,7 +231,7 @@ header {
 }
 
 .dropdown-darkTheme > div > div > a {
-    color: white;
+    color: #ffffff;
 }
 
 /*dropdown theme--------------------------*/
@@ -180,18 +239,27 @@ header {
     display: block;
 }
 
+
 .dropdown-theme {
     position: relative;
+}
+
+#joe {
+
+}
+
+#mama {
+
 }
 
 .dropdown-content-theme {
     display: none;
     position: absolute;
-    right: 160px;
+    right: 150px;
     top: 0;
-    min-width: 160px;
+    min-width: 150px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 2;
+    z-index: 150;
 }
 
 .dropdown-content-theme a, button {
@@ -233,11 +301,97 @@ header {
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+    transition: 0.2s;
 }
 
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    transition: 0.2s;
+}
+
+/*Hamburger Menu---------------------*/
+.hamburgerMenu {
+    display: none;
+    flex: 1;
+    height: 125px;
+}
+
+#menuLow {
+    flex: 0;
+    position: fixed;
+    z-index: 200;
+}
+
+#hamburgerBtn {
+    background-color: #6C0E23;
+    border: solid black 1px;
+    border-radius: 6px;
+    color: white;
+    padding: 15px;
+}
+
+#hamburgerBtnLow {
+    background-color: #6C0E23;
+    border: solid black 1px;
+    border-radius: 3px;
+    color: white;
+    padding: 15px;
+    opacity: 0;
+    transition: .5s;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 500;
+}
+
+#hamburgerBtn i {
+    font-size: 25px;
+}
+
+#hamburgerBtn:hover {
+    background-color: #380714;
+}
+
+#hamburgerBtnLow i {
+    font-size: 25px;
+}
+
+#hamburgerBtnLow:hover {
+    background-color: #380714;
+}
+
+#phoneNavbar {
+    margin-top: 40px;
+    display: flex;
+    background-color: #600d24;
+    flex-direction: column;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    opacity: 0;
+    transition: .3s;
+    pointer-events: none;
+}
+
+#phoneNavbar a {
+    padding: 15px;
+    text-decoration: none;
+    font-family: go3v2, serif;
+    color: white;
+    font-size: 20px;
+}
+
+#phoneNavbar a:hover {
+    background-color: #83122b;
+    cursor: pointer;
+    transition: .1s;
+    padding-left: 30px;
+}
+
+/*---ID of whatever topic/page you are on for the phone nav. Just assign the id to it in the html file*/
+#hidden-phone {
+    background-color: #a21634;
 }
 
 /*main---------------------------*/
@@ -246,15 +400,209 @@ main {
     flex: 1;
 }
 
-.credit-container {
+.title {
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.cred-between {
+    position: absolute;
+    top: 300px;
+    /*border: solid red 1px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    left: 40%;
+    right: 40%;
+    margin: auto;
+}
+
+#credits-left {
+    width: 7.7vw;
+    height: auto;
+}
+
+#credits-right {
+    width: 7.7vw;
+    height: auto;
+}
+
+.betw-1 {
+    text-align: center;
+    font-family: go3v2, serif;
+    font-size: 40px;
+    /*border: solid black 1px;*/
+    max-width: 400px;
+}
+.betw-2 {
+    margin-top: 30px;
+    text-align: center;
+    font-family: go3v2, serif;
+    font-size: 40px;
+    /*border: solid black 1px;*/
+    max-width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+.hiddenSet {
+    display: none;
+}
+
+.shownSet {
+    display: block;
+}
+
+/*parallax----------------------*/
+
+.keyart, .keyart_layer {
+    height: 1000px;
+}
+
+#parallax {
+    display: block;
+}
+
+
+.keyart {
+    position: relative;
+    z-index: -1000;
+}
+
+.keyart_layer {
+    background-position: bottom center;
+    background-size: auto 1500px;
+    background-repeat: repeat-x;
+    width: 100%;
+    position: absolute;
+}
+
+.keyart_layer.parallax {
+    position: fixed;
+}
+#keyart-0 {
+    top: 80px;
+    background-image: url("img/background waves 3.png");
+}
+
+#keyart-1 {
     margin: 70px 10px 10px;
+    top: 230px;
     border: none;
     display: flex;
     justify-content: space-around;
 }
 
-.credit-container > div {
+#keyart-1 > div {
     border: none;
+}
+
+/*h*/
+.sticky-navBar {
+    margin-top: 50px;
+    height: 7vh;
+    /*background-color: red;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: .2s;
+}
+
+.pg-nav-but {
+    margin-top: 5px;
+    background-color: #15141f;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 2;
+    display: block;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.pg-nav-but:hover {
+    background-color: #7a7a12;
+}
+
+.sticky-navBar a {
+    font-family: go3v2, serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+#active-page {
+    background-color: #a61b32;
+    transition: .2s;
+}
+
+#active-page:hover {
+    background-color: #5d0f1c;
+}
+
+.segment-1 {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 300px;
+    /*border: pink solid;*/
+    margin-right: 10%;
+}
+
+.segment-2 {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 900px;
+    /*border: pink solid;*/
+    margin-right: 50%;
+}
+
+.segment-3 {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 1500px;
+    /*border: pink solid;*/
+    margin-right: 50%;
+}
+
+.segment-4 {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 2100px;
+    /*border: pink solid;*/
+    margin-right: 50%;
+}
+
+.intro-chi-div {
+    display: block;
+    /*border: blue solid;*/
+    position: relative;
+    margin-right: 20px;
+}
+
+.intro-chi {
+    width: 200px;
+}
+
+.text-block {
+    display: block;
+    position: relative;
+    font-family: hanyi, serif;
+    font-size: 200%;
 }
 
 /*footer-------------------------*/

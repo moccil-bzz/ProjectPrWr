@@ -1,8 +1,47 @@
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1350px) {
+    .sticky-navBar a {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 1170px) {
     #dragon {
+       display: none;
+    }
+    .extra-space {
+        display: block;
+    }
+
+    .sticky-navBar {
         display: none;
     }
 
+    .navBtn-container {
+        display: none;
+    }
+
+    .hamburgerMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cred-between > a {
+        font-size: 3vw;
+    }
+
+    .segment-3 {
+        top: 1600px;
+    }
+
+    .segment-4 {
+        top: 2400px;
+    }
+
+    #venb {
+        height: 3200px;
+    }
 }
 
 
@@ -12,5 +51,49 @@
     }
     #startBtn {
         font-size: 35px;
+    }
+    #background-image-st-bt {
+        background-size: auto 50px;
+    }
+    #startBtn:hover #background-image-st-bt {
+        background-size: auto 75px;
+    }
+    .segment-1 {
+        left: 5%;
+        top: 30%;
+        margin-right: 5%;
+    }
+    .segment-2 {
+        left: 5%;
+        top: 60%;
+        margin-right: 5%;
+    }
+    .segment-3 {
+        left: 5%;
+        top: 110%;
+        margin-right: 5%;
+    }
+    .segment-4 {
+        left: 5%;
+        top: 170%;
+        margin-right: 5%;
+    }
+    .intro-chi {
+        width: 150px;
+    }
+    .text-block {
+        font-size: 3vw;
+    }
+    .segment-2 > .text-block {
+        font-size: 5vw;
+    }
+    .segment-3 > .text-block {
+        font-size: 5vw;
+    }
+    .segment-4 > .text-block {
+        font-size: 5vw;
+    }
+    #venb {
+        height: 2200px;
     }
 }
