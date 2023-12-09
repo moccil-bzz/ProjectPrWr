@@ -613,6 +613,7 @@ main {
     top: 25vh;
     opacity: 0;
     transition: .5s;
+    pointer-events: none;
 }
 
 .img-0 {
