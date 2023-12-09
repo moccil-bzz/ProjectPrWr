@@ -113,7 +113,7 @@ function content_loader(){
 
             let top = this.pageYOffset;
             let scrollTop = window.scrollY;
-
+            console.log(scrollTop)
             let layers = document.getElementsByClassName("parallax");
             let layer, speed, yPos;
             for (let i = 0; i < layers.length; i++) {
@@ -127,10 +127,11 @@ function content_loader(){
             navSquisher(scrollTop)
             let i0ID = truther(".img-0")
             let i1ID = truther(".img-1")
+            let i2ID = truther(".img-2")
             /*console.log(i0ID)
             console.log(i1ID)*/
             stench()
-            imgShower(scrollTop, i0ID, i1ID)
+            imgShower(scrollTop, i0ID, i1ID, i2ID)
         });
     }
     function dispelParallax() {
@@ -216,8 +217,12 @@ function content_loader(){
 
     //---- Showing the images next to content ----//
 
-    let start_show = 220; // the scroll distance from the top when the img becomes visible
-    let end_show = 600; // scroll distance from top where img becomes invisible
+    let start_show1 = 360; // the scroll distance from the top when the img becomes visible
+    let end_show1 = 750; // scroll distance from top where img becomes invisible
+    let start_show2 = 1000;
+    let end_show2 = 1400;
+    let start_show3 = 1700;
+    let end_show3 = 2200;
 
     function truther(selector) {
         const element = document.querySelector(selector);
@@ -225,29 +230,53 @@ function content_loader(){
     }
     // checking if element exists on page, part of scroll event
 
-    function imgShower(scrollTop, dong, yao) { // shows and hides images
-        if (dong && (start_show <= scrollTop && scrollTop <= end_show)) {
-            console.log("state 1 true");
+    function imgShower(scrollTop, dong, yao, shu) { // shows and hides images
+        if (dong && (start_show1 <= scrollTop && scrollTop <= end_show1)) {
+            /*console.log("state 1 true");*/
             document.querySelector(".img-0").style.opacity = "1";
-        } else if (dong && (start_show > scrollTop || scrollTop > end_show)) {
-            console.log("state 1 false")
+        } if (dong && (start_show1 > scrollTop || scrollTop > end_show1)) {
+            /*console.log("state 1 false")*/
             document.querySelector(".img-0").style.opacity = "0";
-        } else if (yao && (start_show <= scrollTop && scrollTop <= end_show)) {
-            console.log("state 2 true");
+        } if (yao && (start_show2 <= scrollTop && scrollTop <= end_show2)) {
+            /*console.log("state 2 true");*/
             document.querySelector(".img-1").style.opacity = "1";
-        } else if (yao && (start_show > scrollTop || scrollTop > end_show)) {
-            console.log("state 2 false")
+        } if (yao && (start_show2 > scrollTop || scrollTop > end_show2)) {
+            /*console.log("state 2 false")*/
             document.querySelector(".img-1").style.opacity = "0";
+        } if (shu && (start_show3 <= scrollTop && scrollTop <= end_show3)) {
+            /*console.log("state 3 true");*/
+            document.querySelector(".img-2").style.opacity = "1";
+        } if (shu && (start_show3 > scrollTop || scrollTop > end_show3)) {
+            /*console.log("state 3 false")*/
+            document.querySelector(".img-2").style.opacity = "0";
         }
     }
 
     function stench() { // changes values of start_show and end_show so when imgShower goes through all images only the right one will be shown
-        if (window.innerWidth <= 701) {
-            start_show = 69
-            end_show = 420
+        if ((window.innerWidth <= 390) && (window.innerHeight <= 845)) { // upstanding iphone 12 pro
+            start_show1 = 627
+            end_show1 = 776
+            start_show2 = 1235;
+            end_show2 = 2100;
+            start_show3 = 2200;
+            end_show3 = 2680;
+            console.log("2 is true")
+        } else if ((window.innerWidth <= 850) && (window.innerHeight <= 390)) { // sideways iphone 12 pro
+            start_show1 = 800
+            end_show1 = 1150
+            start_show2 = 1350;
+            end_show2 = 2100;
+            start_show3 = 2200;
+            end_show3 = 2680;
+            console.log("1 is true")
         } else {
-            start_show = 220
-            end_show = 600} // all special values are set with ifs and if none of them apply, back to default
+            start_show1 = 360
+            end_show1 = 750
+            start_show2 = 1000;
+            end_show2 = 1400;
+            start_show3 = 1700;
+            end_show3 = 2200;
+        } // all special values are set with ifs and if none of them apply, back to default
     }
 
     let isMouseOverJoe = false;

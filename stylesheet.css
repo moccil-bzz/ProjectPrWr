@@ -606,14 +606,28 @@ main {
     font-size: 200%;
 }
 
-.img-0 {
+.imgse {
     position: fixed;
-    height: 600px;
     right: 50px;
-    z-index: 500;
+    z-index: 100;
     top: 25vh;
     opacity: 0;
     transition: .5s;
+}
+
+.img-0 {
+    top: 20vh;
+    height: 600px;
+}
+
+.img-1 {
+    height: 500px;
+}
+
+.img-2 {
+    top: 20vh;
+    right: 200px;
+    height: 600px;
 }
 
 /*footer-------------------------*/

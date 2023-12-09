@@ -1,8 +1,39 @@
+@media screen and (max-width: 1820px) {
+    .img-0 {
+        height: 500px;
+    }
+
+    .img-1 {
+        height: 480px;
+    }
+
+    .img-2 {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1540px) {
+    .img-0 {
+        height: 400px;
+    }
+
+    .img-1 {
+        height: 300px;
+    }
+
+    .img-2 {
+        height: 400px;
+    }
+}
+
 @media screen and (max-width: 1350px) {
     .sticky-navBar a {
         font-size: 15px;
     }
 
+    .img-0 {
+        height: 300px;
+    }
 }
 
 @media screen and (max-width: 1170px) {
@@ -41,6 +72,41 @@
 
     #venb {
         height: 3200px;
+    }
+
+    .imgse {
+        right: 25px;
+        top: 25vh;
+    }
+
+    .img-0 {
+        top: 20vh;
+        height: 300px;
+    }
+
+    .img-1 {
+        height: 200px;
+    }
+
+    .img-2 {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .img-0 {
+        top: 25vh;
+        height: 200px;
+    }
+
+    .img-1 {
+        height: 200px;
+    }
+
+    .img-2 {
+        top: 10vh;
+        height: 300px;
+        right: 100px;
     }
 }
 
