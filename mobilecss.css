@@ -44,6 +44,16 @@
     }
 }
 
+@media screen and (max-width: 819px) {
+    .segment-4 {
+        top: 2500px;
+    }
+
+    #venb {
+        height: 3300px;
+    }
+}
+
 
 @media screen and (max-width: 750px) {
     .footerTitles {
@@ -65,17 +75,17 @@
     }
     .segment-2 {
         left: 5%;
-        top: 60%;
+        top: 75%;
         margin-right: 5%;
     }
     .segment-3 {
         left: 5%;
-        top: 110%;
+        top: 140%;
         margin-right: 5%;
     }
     .segment-4 {
         left: 5%;
-        top: 170%;
+        top: 215%;
         margin-right: 5%;
     }
     .intro-chi {

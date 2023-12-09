@@ -208,6 +208,10 @@ function content_loader(){
         })
     }
 
+    function imgShower() {
+
+    }
+
     let isMouseOverJoe = false;
     let isMouseOverMama = false;
     let isMouseOverSet = false;

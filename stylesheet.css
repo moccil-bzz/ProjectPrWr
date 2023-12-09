@@ -558,6 +558,7 @@ main {
     top: 300px;
     /*border: pink solid;*/
     margin-right: 10%;
+    margin-bottom: 300px;
 }
 
 .segment-2 {
@@ -603,6 +604,16 @@ main {
     position: relative;
     font-family: hanyi, serif;
     font-size: 200%;
+}
+
+.img-0 {
+    position: fixed;
+    height: 600px;
+    right: 50px;
+    z-index: 500;
+    top: 25vh;
+    opacity: 0;
+    transition: .5s;
 }
 
 /*footer-------------------------*/
