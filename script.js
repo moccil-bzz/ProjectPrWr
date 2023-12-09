@@ -229,9 +229,15 @@ function content_loader(){
         if (dong && (start_show <= scrollTop && scrollTop <= end_show)) {
             console.log("state 1 true");
             document.querySelector(".img-0").style.opacity = "1";
+        } else if (dong && (start_show > scrollTop || scrollTop > end_show)) {
+            console.log("state 1 false")
+            document.querySelector(".img-0").style.opacity = "0";
         } else if (yao && (start_show <= scrollTop && scrollTop <= end_show)) {
             console.log("state 2 true");
             document.querySelector(".img-1").style.opacity = "1";
+        } else if (yao && (start_show > scrollTop || scrollTop > end_show)) {
+            console.log("state 2 false")
+            document.querySelector(".img-1").style.opacity = "0";
         }
     }
 
