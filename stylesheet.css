@@ -609,7 +609,7 @@ main {
 .imgse {
     position: fixed;
     right: 50px;
-    z-index: 100;
+    z-index: 5;
     top: 25vh;
     opacity: 0;
     transition: .5s;
