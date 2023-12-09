@@ -125,6 +125,12 @@ function content_loader(){
             }
             checkScroll(scrollTop)
             navSquisher(scrollTop)
+            let i0ID = truther(".img-0")
+            let i1ID = truther(".img-1")
+            /*console.log(i0ID)
+            console.log(i1ID)*/
+            stench()
+            imgShower(scrollTop, i0ID, i1ID)
         });
     }
     function dispelParallax() {
@@ -208,8 +214,34 @@ function content_loader(){
         })
     }
 
-    function imgShower() {
+    //---- Showing the images next to content ----//
 
+    let start_show = 220; // the scroll distance from the top when the img becomes visible
+    let end_show = 600; // scroll distance from top where img becomes invisible
+
+    function truther(selector) {
+        const element = document.querySelector(selector);
+        return element !== null;
+    }
+    // checking if element exists on page, part of scroll event
+
+    function imgShower(scrollTop, dong, yao) { // shows and hides images
+        if (dong && (start_show <= scrollTop && scrollTop <= end_show)) {
+            console.log("state 1 true");
+            document.querySelector(".img-0").style.opacity = "1";
+        } else if (yao && (start_show <= scrollTop && scrollTop <= end_show)) {
+            console.log("state 2 true");
+            document.querySelector(".img-1").style.opacity = "1";
+        }
+    }
+
+    function stench() { // changes values of start_show and end_show so when imgShower goes through all images only the right one will be shown
+        if (window.innerWidth <= 701) {
+            start_show = 69
+            end_show = 420
+        } else {
+            start_show = 220
+            end_show = 600} // all special values are set with ifs and if none of them apply, back to default
     }
 
     let isMouseOverJoe = false;
