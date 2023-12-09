@@ -128,10 +128,11 @@ function content_loader(){
             let i0ID = truther(".img-0")
             let i1ID = truther(".img-1")
             let i2ID = truther(".img-2")
+            let i3ID = truther(".img-3")
             /*console.log(i0ID)
             console.log(i1ID)*/
             stench()
-            imgShower(scrollTop, i0ID, i1ID, i2ID)
+            imgShower(scrollTop, i0ID, i1ID, i2ID, i3ID)
         });
     }
     function dispelParallax() {
@@ -223,6 +224,8 @@ function content_loader(){
     let end_show2 = 1400;
     let start_show3 = 1700;
     let end_show3 = 2200;
+    let start_show4 = 360;
+    let end_show4 = 750;
 
     function truther(selector) {
         const element = document.querySelector(selector);
@@ -230,7 +233,7 @@ function content_loader(){
     }
     // checking if element exists on page, part of scroll event
 
-    function imgShower(scrollTop, dong, yao, shu) { // shows and hides images
+    function imgShower(scrollTop, dong, yao, shu, liang) { // shows and hides images
         if (dong && (start_show1 <= scrollTop && scrollTop <= end_show1)) {
             /*console.log("state 1 true");*/
             document.querySelector(".img-0").style.opacity = "1";
@@ -249,6 +252,12 @@ function content_loader(){
         } if (shu && (start_show3 > scrollTop || scrollTop > end_show3)) {
             /*console.log("state 3 false")*/
             document.querySelector(".img-2").style.opacity = "0";
+        } if (liang && (start_show4 <= scrollTop && scrollTop <= end_show4)) {
+            /*console.log("state 1 true");*/
+            document.querySelector(".img-3").style.opacity = "1";
+        } if (liang && (start_show4 > scrollTop || scrollTop > end_show4)) {
+            /*console.log("state 1 false")*/
+            document.querySelector(".img-3").style.opacity = "0";
         }
     }
 
@@ -260,6 +269,8 @@ function content_loader(){
             end_show2 = 2100;
             start_show3 = 2200;
             end_show3 = 2680;
+            start_show4 = 627
+            end_show4 = 776
             console.log("2 is true")
         } else if ((window.innerWidth <= 850) && (window.innerHeight <= 390)) { // sideways iphone 12 pro
             start_show1 = 800
@@ -268,6 +279,8 @@ function content_loader(){
             end_show2 = 2100;
             start_show3 = 2200;
             end_show3 = 2680;
+            start_show4 = 800
+            end_show4 = 1450
             console.log("1 is true")
         } else {
             start_show1 = 360
@@ -276,6 +289,8 @@ function content_loader(){
             end_show2 = 1400;
             start_show3 = 1700;
             end_show3 = 2200;
+            start_show4 = 360
+            end_show4 = 750
         } // all special values are set with ifs and if none of them apply, back to default
     }
 
@@ -363,6 +378,15 @@ function content_loader(){
         if (document.getElementById("beginningsImg")){
             document.getElementById("beginningsImg").src = '../img/beginnings_1_bl.png';
         }
+        if (document.getElementById("beginningsImg1")){
+            document.getElementById("beginningsImg1").src = '../img/idaf prwr wgcwzwm intro icon 2 bl.png';
+        }
+        if (document.getElementById("beginningsImg2")) {
+            document.getElementById("beginningsImg2").src = '../img/idaf prwr wgcwzwm intro icon 3 bl.png';
+        }
+        if (document.getElementById("beginningsImg3")) {
+            document.getElementById("beginningsImg3").src = '../img/idaf prwr wgcwzwm intro icon 4 bl.png';
+        }
         document.querySelectorAll(".dropdown-darkTheme").forEach((i) => {
             i.classList.remove("dropdown-darkTheme");
             i.classList.add("dropdown-lightTheme");
@@ -387,6 +411,15 @@ function content_loader(){
         }
         if (document.getElementById("beginningsImg")){
             document.getElementById("beginningsImg").src = '../img/beginnings_1_wh.png';
+        }
+        if (document.getElementById("beginningsImg1")){
+            document.getElementById("beginningsImg1").src = '../img/idaf prwr wgcwzwm intro icon 2 wh.png';
+        }
+        if (document.getElementById("beginningsImg2")){
+            document.getElementById("beginningsImg2").src = '../img/idaf prwr wgcwzwm intro icon 3 wh.png';
+        }
+        if (document.getElementById("beginningsImg2")){
+            document.getElementById("beginningsImg2").src = '../img/idaf prwr wgcwzwm intro icon 4 wh.png';
         }
         document.querySelectorAll(".dropdown-lightTheme").forEach((i) => {
             i.classList.remove("dropdown-lightTheme")
