@@ -405,10 +405,3 @@ function hovering(){
         }
     });
 }
-
-function shower() {
-    document.querySelectorAll(".hidden").forEach((i) => {
-        i.classList.remove("hidden");
-        i.classList.add("shown");
-    });
-}
