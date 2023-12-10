@@ -558,6 +558,7 @@ main {
     top: 300px;
     /*border: pink solid;*/
     margin-right: 10%;
+    margin-bottom: 300px;
 }
 
 .segment-2 {
@@ -603,6 +604,36 @@ main {
     position: relative;
     font-family: hanyi, serif;
     font-size: 200%;
+}
+
+.imgse {
+    position: fixed;
+    right: 50px;
+    z-index: 5;
+    top: 25vh;
+    opacity: 0;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.img-0 {
+    top: 20vh;
+    height: 600px;
+}
+
+.img-1 {
+    height: 500px;
+}
+
+.img-2 {
+    top: 20vh;
+    right: 200px;
+    height: 600px;
+}
+
+.img-3 {
+    top: 20vh;
+    height: 600px;
 }
 
 /*footer-------------------------*/
