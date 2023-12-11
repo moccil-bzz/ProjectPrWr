@@ -112,12 +112,27 @@ function content_loader(){
     }
 
     function closeSettingsMenu() {
+        document.querySelectorAll(".shownLang").forEach((i) => {
+            i.classList.remove("shownLang");
+            i.classList.add("hiddenLang");
+        });
+        checkerLang = false;
+        document.getElementById("languageSetBtn").querySelector("i").style.transform = "rotate(45deg)";
+
+        document.querySelectorAll(".shownTheme").forEach((i) => {
+            i.classList.remove("shownTheme");
+            i.classList.add("hiddenTheme");
+        });
+        checkerTheme = false;
+        document.getElementById("themeSetBtn").querySelector("i").style.transform = "rotate(45deg)";
+
         document.querySelectorAll(".shownSet").forEach((i) => {
             i.classList.remove("shownSet");
             i.classList.add("hiddenSet");
         });
         document.getElementById("settingsBtnHam").querySelector("i").style.transform = "rotate(45deg)";
         checkerSet = false;
+
     }
 
     hovering()
