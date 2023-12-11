@@ -13,6 +13,14 @@ function changer() {
 changer()
 
 function content_loader(){
+    if (localStorage.getItem("themeLight") !== null) {
+        let value = localStorage.getItem("themeLight")
+        if (value === "true"){
+            changeThemeLight()
+        } else {
+            changeThemeDark()
+        }
+    }
     document.getElementById("themeBtn-light").addEventListener("click", changeThemeLight);
     document.getElementById("themeBtn-dark").addEventListener("click", changeThemeDark);
     document.getElementById("lightThemeBtn").addEventListener("click", changeThemeLight);
@@ -446,6 +454,10 @@ function content_loader(){
 //-------------MARKOS STUFF END NO TOUCHYYY!!!!-------------//
 
     function changeThemeLight() {
+        if (localStorage.getItem("themeLight") !== null) {
+            localStorage.removeItem("themeLight")
+        }
+        localStorage.setItem("themeLight", "true")
         document.getElementsByTagName("body")[0].style.backgroundColor = "white";
         if (document.getElementById("credits-left")) {
             document.getElementById("credits-left").src = './img/credits%20left%20transp%201%20og.png';
@@ -480,6 +492,10 @@ function content_loader(){
     }
 
     function changeThemeDark() {
+        if (localStorage.getItem("themeLight") !== null) {
+            localStorage.removeItem("themeLight")
+        }
+        localStorage.setItem("themeLight", "false")
         document.getElementsByTagName("body")[0].style.backgroundColor = "#1F1F1FFF";
         if (document.getElementById("credits-left")){
             document.getElementById("credits-left").src = './img/credits%20left%20transp%20og%201%20dm.png';
