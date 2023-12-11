@@ -38,7 +38,10 @@ function content_loader(){
             document.getElementById("topicBtn").style.backgroundColor = "380714FF";
             checker = false;
         }
+
+        closeSettingsMenu();
     });
+
     let checkerSet = false;
     document.getElementById("settingsBtnHam").addEventListener("click", () => {
         if (!checkerSet) {
@@ -46,17 +49,77 @@ function content_loader(){
                 i.classList.remove("hiddenSet");
                 i.classList.add("shownSet");
             });
-            checkerSet = true;
             document.getElementById("settingsBtnHam").querySelector("i").style.transform = "rotate(-135deg)";
+            checkerSet = true;
         } else {
             document.querySelectorAll(".shownSet").forEach((i) => {
                 i.classList.remove("shownSet");
                 i.classList.add("hiddenSet");
             });
-            checkerSet = false;
             document.getElementById("settingsBtnHam").querySelector("i").style.transform = "rotate(45deg)";
+            checkerSet = false;
+        }
+
+        closeTopicMenu();
+    });
+
+    let checkerTheme = false;
+    document.getElementById("themeSetBtn").addEventListener("click", () => {
+        if (!checkerTheme) {
+            document.querySelectorAll(".hiddenTheme").forEach((i) => {
+                i.classList.remove("hiddenTheme");
+                i.classList.add("shownTheme");
+            });
+            document.getElementById("themeSetBtn").querySelector("i").style.transform = "rotate(-135deg)";
+            checkerTheme = true;
+        } else {
+            document.querySelectorAll(".shownTheme").forEach((i) => {
+                i.classList.remove("shownTheme");
+                i.classList.add("hiddenTheme");
+            });
+            checkerTheme = false;
+            document.getElementById("themeSetBtn").querySelector("i").style.transform = "rotate(45deg)";
         }
     });
+
+    let checkerLang = false;
+    document.getElementById("languageSetBtn").addEventListener("click", () => {
+        if (!checkerLang) {
+            document.querySelectorAll(".hiddenLang").forEach((i) => {
+                i.classList.remove("hiddenLang");
+                i.classList.add("shownLang");
+            });
+            document.getElementById("languageSetBtn").querySelector("i").style.transform = "rotate(-135deg)";
+            checkerLang = true;
+        } else {
+            document.querySelectorAll(".shownLang").forEach((i) => {
+                i.classList.remove("shownLang");
+                i.classList.add("hiddenLang");
+            });
+            checkerLang = false;
+            document.getElementById("languageSetBtn").querySelector("i").style.transform = "rotate(45deg)";
+        }
+    });
+
+    function closeTopicMenu() {
+        document.querySelectorAll(".shown").forEach((i) => {
+            i.classList.remove("shown");
+            i.classList.add("hidden");
+        });
+        document.getElementById("topicBtn").querySelector("i").style.transform = "rotate(45deg)";
+        document.getElementById("topicBtn").style.backgroundColor = "380714FF";
+        checker = false;
+    }
+
+    function closeSettingsMenu() {
+        document.querySelectorAll(".shownSet").forEach((i) => {
+            i.classList.remove("shownSet");
+            i.classList.add("hiddenSet");
+        });
+        document.getElementById("settingsBtnHam").querySelector("i").style.transform = "rotate(45deg)";
+        checkerSet = false;
+    }
+
     hovering()
     navSquisher(window.scrollY)
 

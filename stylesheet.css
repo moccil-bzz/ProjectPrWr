@@ -459,6 +459,22 @@ main {
     display: block;
 }
 
+.hiddenTheme {
+    display: none;
+}
+
+.shownTheme {
+    display: block;
+}
+
+.hiddenLang {
+    display: none;
+}
+
+.shownLang {
+    display: block;
+}
+
 /*parallax----------------------*/
 
 .keyart, .keyart_layer {
