@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="../script.js"></script>
 </head>
-<body>
+<body id="venb">
 <header id="header">
   <div class='bg-header'>
     <img src='../img/idaf%20prwr%20wgcwzwm%20top%20navbar%202.png' alt='A cool navbar background is meant to be here...'>
   </div>
   <div class="start-btn-container">
 
-    <a href="../indexde.html">
+    <a href="../index.html">
       <button id="startBtn">
         <span id="background-image-st-bt"></span>
         <span id="st-bt-text">Home</span>
@@ -30,17 +30,17 @@
     </div>
     <div class="navBtn-container">
       <div class="dropdown">
-        <button id="settingsBtn" class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> Einstellungen <i class="arrowNavbar down"></i></button>
+        <button id="settingsBtn" class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> einstellungen <i class="arrowNavbar down"></i></button>
         <div class="dropdown-content dropdown-lightTheme">
           <div id="joe" class="dropdown-theme">
             <a><i class="arrowDropdown arrowColorLight left"></i> Sprache</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
-              <a href="en.html">English</a>
-              <a href="de.html">Deutsch</a>
+              <a href="./en.html">Englisch</a>
+              <a href="./de.html">Deutsch</a>
             </div>
           </div>
           <div id="mama" class="dropdown-theme">
-            <a><i class="arrowDropdown arrowColorLight left"></i> Modus</a>
+            <a href="#"><i class="arrowDropdown arrowColorLight left"></i> Theme</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
               <a id="themeBtn-light">Hell</a>
               <a id="themeBtn-dark">Dunkel</a>
@@ -60,7 +60,7 @@
   </div>
 </header>
 <div class="sticky-navBar">
-  <a href="../v-ref/de.html"><div class="pg-nav-but">China bevor Reformen</div></a>
+  <a href="../v-ref/de.html"><div class="pg-nav-but" id="active-page">China bevor Reformen</div></a>
   <a href='../e-ref/de.html'><div class="pg-nav-but">Einleitung von Reformen</div></a>
   <a href='../n-ref/de.html'><div class="pg-nav-but">Entwicklungen nach den Reformen</div></a>
   <a href='../heute/de.html'><div class="pg-nav-but">Heutige wirtschaftliche Situation</div></a>
@@ -69,7 +69,7 @@
 <div id="phoneNavbar">
   <a id="topicBtn">Themen <i class="arrowNavbar down"></i></a>
   <div>
-    <a href="../v-ref/de.html" class="hidden">\\\China bevor Reformen</a>
+    <a href="../v-ref/de.html" class="hidden" id="hidden-phone">\\\China bevor Reformen</a>
     <a href='../e-ref/de.html' class="hidden">\\\Einleitung von Reformen</a>
     <a href='../n-ref/de.html' class="hidden">\\\Entwicklungen nach den Reformen</a>
     <a href='../heute/de.html' class="hidden">\\\Heutige wirtschaftliche Situation</a>
@@ -88,19 +88,48 @@
   <div class="keyart" id="parallax">
     <div class="keyart_layer parallax" id="keyart-0" data-speed="50"></div>		<!-- 00.0 -->
   </div>
+  <img src="../img/boygathersgrass.jpg" class="img-0 imgse">
+  <img src="../img/Brave_the_wind_and_the_waves.jpg" class="img-1 imgse">
+  <img src="../img/deng%20xiaoping.jpg" class="img-2 imgse">
   <div class="segment-1">
     <div class="intro-chi-div">
-      <img class="intro-chi" src="../img/beginnings_1_bl.png">
+      <img class="intro-chi" id="beginningsImg" src="../img/beginnings_1_bl.png">
     </div>
     <div class="text-block">
       <a class="fontColorLight">
         <span class="title">China bevor den ökonomischen Reformen</span>
         <p>
-          Unter der Leitung von Mao Zedong betrieb China eine Planwirtschaft, in der ein grosser Teil der Ökonomie vom Staat kontrolliert wurde. Die Preise wurden bestimmt, Produktionsziele gesetzt und Ressourcen verteilt. Die Wirtschaft konzentrierte sich auf Selbstversorgung; Produkte wurden nur aus anderen Ländern importiert, wenn sie nicht selbst hergestellt oder beschafft werden konnten. Wichtige Initiativen waren die Kollektivierung der Bauernhöfe in Kommunen und die staatlich geförderte Industrialisierung. All diese Richtlinien führten jedoch dazu, dass es für Firmen, Arbeiter und Bauern keinen Anreiz gab, sich um die Qualität ihrer Produkte zu kümmern. Stattdessen waren sie nur darauf fokussiert, die Produktionsziele zu erreichen.
-
+          Unter der Leitung von Mao Zedong betrieb China eine Planwirtschaft, in der ein grosser Teil der Ökonomie vom Staat kontrolliert wurde. Die Preise wurden bestimmt, Produktionsziele gesetzt und Ressourcen verteilt. Die Wirtschaft konzentrierte sich auf Selbstversorgung; Produkte wurden nur aus anderen Ländern importiert, wenn sie nicht selbst hergestellt oder beschafft werden konnten.
         </p>
+      </a>
+    </div>
+  </div>
+
+  <div class="segment-2">
+    <div class="text-block">
+      <a class="fontColorLight">
         <p>
-          China litt unter grossen ökonomischen Schwierigkeiten, insbesondere während des «大跃进» („Grossen Sprungs nach vorn“, einer gescheiterten Kampagne von Mao Zedong, um den Rückstand zu den westlichen Ländern aufzuholen) von 1958 bis 1962, bei der auch eine Hungersnot ausbrach und bis zu 45 Millionen Menschen starben. Der Lebensstandard fiel während dieser Zeit um 20,3%. Im Vergleich zu Ländern wie Japan war das Wachstum des Lebensstandards ohnehin sehr niedrig. 1978, nach dem Tod von Mao Zedong im Jahr 1976, begann China, ihren Markt zu liberalisieren und den Handel mit dem Westen zu öffnen, in der Hoffnung, dass dies das wirtschaftliche Wachstum und den Lebensstandard fördern würde. Deng Xiaoping der die Rolle als «Überragenden Führers» hatte, leitete diese Reformen ein.
+          Wichtige Initiativen waren die Kollektivierung der Bauernhöfe in Kommunen und die staatlich geförderte Industrialisierung. All diese Richtlinien führten jedoch dazu, dass es für Firmen, Arbeiter und Bauern keinen Anreiz gab, sich um die Qualität ihrer Produkte zu kümmern. Stattdessen waren sie nur darauf fokussiert, die Produktionsziele zu erreichen.
+        </p>
+      </a>
+    </div>
+  </div>
+
+  <div class="segment-3">
+    <div class="text-block">
+      <a class="fontColorLight">
+        <p>
+          China litt unter grossen ökonomischen Schwierigkeiten, insbesondere während des «大跃进» („Grossen Sprungs nach vorn“, einer gescheiterten Kampagne von Mao Zedong, um den Rückstand zu den westlichen Ländern aufzuholen) von 1958 bis 1962, bei der auch eine Hungersnot ausbrach und bis zu 45 Millionen Menschen starben. Der Lebensstandard fiel während dieser Zeit um 20,3%. Im Vergleich zu Ländern wie Japan war das Wachstum des Lebensstandards ohnehin sehr niedrig.
+        </p>
+      </a>
+    </div>
+  </div>
+
+  <div class="segment-4">
+    <div class="text-block">
+      <a class="fontColorLight">
+        <p>
+          1978, nach dem Tod von Mao Zedong im Jahr 1976, begann China, ihren Markt zu liberalisieren und den Handel mit dem Westen zu öffnen, in der Hoffnung, dass dies das wirtschaftliche Wachstum und den Lebensstandard fördern würde. Deng Xiaoping der die Rolle als «Überragenden Führers» hatte, leitete diese Reformen ein.
         </p>
       </a>
     </div>
@@ -108,7 +137,7 @@
 </main>
 <footer id="footer">
   <div class="footerData">
-    <a href="../disclaimer/de.html" class="footerTitles">Haftungsausschluss</a>
+    <a href="../disclaimer/de.html" class="footerTitles">Disclaimer</a>
   </div>
   <div class="footerData">
     <a href="../source/de.html" class="footerTitles">Quellen</a>

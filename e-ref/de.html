@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="../script.js"></script>
 </head>
-<body>
+<body id="venb">
 <header id="header">
   <div class='bg-header'>
     <img src='../img/idaf%20prwr%20wgcwzwm%20top%20navbar%202.png' alt='A cool navbar background is meant to be here...'>
   </div>
   <div class="start-btn-container">
 
-    <a href="../indexde.html">
+    <a href="../index.html">
       <button id="startBtn">
         <span id="background-image-st-bt"></span>
         <span id="st-bt-text">Home</span>
@@ -30,17 +30,17 @@
     </div>
     <div class="navBtn-container">
       <div class="dropdown">
-        <button id="settingsBtn" class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> Einstellungen <i class="arrowNavbar down"></i></button>
+        <button id="settingsBtn" class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> einstellungen <i class="arrowNavbar down"></i></button>
         <div class="dropdown-content dropdown-lightTheme">
           <div id="joe" class="dropdown-theme">
             <a><i class="arrowDropdown arrowColorLight left"></i> Sprache</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
-              <a href="en.html">English</a>
-              <a href="de.html">Deutsch</a>
+              <a href="./en.html">Englisch</a>
+              <a href="./de.html">Deutsch</a>
             </div>
           </div>
           <div id="mama" class="dropdown-theme">
-            <a><i class="arrowDropdown arrowColorLight left"></i> Modus</a>
+            <a href="#"><i class="arrowDropdown arrowColorLight left"></i> Modus</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
               <a id="themeBtn-light">Hell</a>
               <a id="themeBtn-dark">Dunkel</a>
@@ -61,16 +61,16 @@
 </header>
 <div class="sticky-navBar">
   <a href="../v-ref/de.html"><div class="pg-nav-but">China bevor Reformen</div></a>
-  <a href='../e-ref/de.html'><div class="pg-nav-but">Einleitung von Reformen</div></a>
+  <a href='../e-ref/de.html'><div class="pg-nav-but" id="active-page">Einleitung von Reformen</div></a>
   <a href='../n-ref/de.html'><div class="pg-nav-but">Entwicklungen nach den Reformen</div></a>
   <a href='../heute/de.html'><div class="pg-nav-but">Heutige wirtschaftliche Situation</div></a>
   <a href="../quiz.html"><div class="pg-nav-but">Quiz</div></a>
 </div>
 <div id="phoneNavbar">
-  <a id="topicBtn">Themen <i class="arrowNavbar down"></i></a>
+  <a id="topicBtn">Topic <i class="arrowNavbar down"></i></a>
   <div>
     <a href="../v-ref/de.html" class="hidden">\\\China bevor Reformen</a>
-    <a href='../e-ref/de.html' class="hidden">\\\Einleitung von Reformen</a>
+    <a href='../e-ref/de.html' class="hidden" id="hidden-phone">\\\Einleitung von Reformen</a>
     <a href='../n-ref/de.html' class="hidden">\\\Entwicklungen nach den Reformen</a>
     <a href='../heute/de.html' class="hidden">\\\Heutige wirtschaftliche Situation</a>
   </div>
@@ -88,20 +88,34 @@
   <div class="keyart" id="parallax">
     <div class="keyart_layer parallax" id="keyart-0" data-speed="50"></div>		<!-- 00.0 -->
   </div>
+  <img src="../img/boygathersgrass.jpg" class="img-0 imgse">
+  <img src="../img/Brave_the_wind_and_the_waves.jpg" class="img-1 imgse" style="right: 20vw">
+  <img src="../img/deng%20xiaoping.jpg" class="img-2 imgse">
   <div class="segment-1">
     <div class="intro-chi-div">
-
+      <img class="intro-chi" id="beginningsImg1" src="../img/idaf%20prwr%20wgcwzwm%20intro%20icon%202%20bl.png">
     </div>
-
-
     <div class="text-block">
-      <a class="text-block-text"> <h1>Die Einleitung der Reformen</h1>
+      <a class="fontColorLight">
+        <span class="title">Die Einleitung der Reformen</span>
         <p>
           Am Anfang von 1979 wurden viele Änderungen in der Wirtschaft vorgenommen. Bauern konnten jetzt einen Teil ihrer Ernte auf dem freien Markt verkaufen. An der Küste wurden spezielle Zonen etabliert, die dem Zweck des ausländischen Handels dienten; Exporte und Importe stiegen.
         </p>
+      </a>
+    </div>
+  </div>
+  <div class="segment-2">
+    <div class="text-block">
+      <a class="fontColorLight">
         <p>
           Die ökonomische Kontrolle wurde in vielen Sektoren auch an lokale und provinziale Regierungen übergeben, die dann unter freien Marktprinzipien operierten, anstatt unter der staatlich geplanten Wirtschaft. Die Menschen wurden ebenfalls ermutigt, eigene Geschäfte zu gründen. Staatlich festgesetzte Preise wurden ebenfalls grösstenteils eliminiert.
         </p>
+      </a>
+    </div>
+  </div>
+  <div class="segment-4">
+    <div class="text-block">
+      <a class="fontColorLight">
         <p>
           Diese Liberalisierung der Wirtschaft war der Schlüssel zu Chinas massivem Wachstum. Ihre schrittweise Einführung der Reformen liess sie erkennen, welche funktionierten und welche nicht, sodass die bevorzugten Richtlinien im Rest des Landes eingeführt werden konnten.
         </p>
@@ -111,7 +125,7 @@
 </main>
 <footer id="footer">
   <div class="footerData">
-    <a href="../disclaimer/de.html" class="footerTitles">Haftungsausschluss</a>
+    <a href="../disclaimer/de.html" class="footerTitles">Disclaimer</a>
   </div>
   <div class="footerData">
     <a href="../source/de.html" class="footerTitles">Quellen</a>

@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chinas Weg zur Wirtschaftsmacht</title>
-  <link rel="stylesheet" href='../stylesheet.css'>
-  <link rel="stylesheet" href='../mobilecss.css'>
-  <script src='../script.js'></script>
+  <link rel="stylesheet" href="../stylesheet.css">
+  <link rel="stylesheet" href="../mobilecss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../script.js"></script>
 </head>
-<body>
+<body id="venb">
 <header id="header">
   <div class='bg-header'>
     <img src='../img/idaf%20prwr%20wgcwzwm%20top%20navbar%202.png' alt='A cool navbar background is meant to be here...'>
   </div>
   <div class="start-btn-container">
 
-    <a href="../indexde.html">
+    <a href="../index.html">
       <button id="startBtn">
         <span id="background-image-st-bt"></span>
         <span id="st-bt-text">Home</span>
@@ -29,17 +30,17 @@
     </div>
     <div class="navBtn-container">
       <div class="dropdown">
-        <button id="settingsBtn" class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> Einstellungen <i class="arrowNavbar down"></i></button>
+        <button id="settingsBtn" class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> einstellungen <i class="arrowNavbar down"></i></button>
         <div class="dropdown-content dropdown-lightTheme">
           <div id="joe" class="dropdown-theme">
             <a><i class="arrowDropdown arrowColorLight left"></i> Sprache</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
-              <a href="en.html">English</a>
-              <a href="de.html">Deutsch</a>
+              <a href="./en.html">Englisch</a>
+              <a href="./de.html">Deutsch</a>
             </div>
           </div>
           <div id="mama" class="dropdown-theme">
-            <a><i class="arrowDropdown arrowColorLight left"></i> Modus</a>
+            <a href="#"><i class="arrowDropdown arrowColorLight left"></i> Modus</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
               <a id="themeBtn-light">Hell</a>
               <a id="themeBtn-dark">Dunkel</a>
@@ -62,7 +63,7 @@
   <a href="../v-ref/de.html"><div class="pg-nav-but">China bevor Reformen</div></a>
   <a href='../e-ref/de.html'><div class="pg-nav-but">Einleitung von Reformen</div></a>
   <a href='../n-ref/de.html'><div class="pg-nav-but">Entwicklungen nach den Reformen</div></a>
-  <a href='../heute/de.html'><div class="pg-nav-but">Heutige wirtschaftliche Situation</div></a>
+  <a href='../heute/de.html'><div class="pg-nav-but" id="active-page">Heutige wirtschaftliche Situation</div></a>
   <a href="../quiz.html"><div class="pg-nav-but">Quiz</div></a>
 </div>
 <div id="phoneNavbar">
@@ -71,7 +72,7 @@
     <a href="../v-ref/de.html" class="hidden">\\\China bevor Reformen</a>
     <a href='../e-ref/de.html' class="hidden">\\\Einleitung von Reformen</a>
     <a href='../n-ref/de.html' class="hidden">\\\Entwicklungen nach den Reformen</a>
-    <a href='../heute/de.html' class="hidden">\\\Heutige wirtschaftliche Situation</a>
+    <a href='../heute/de.html' class="hidden" id="hidden-phone">\\\Heutige wirtschaftliche Situation</a>
   </div>
   <a id="settingsBtnHam">Einstellungen <i class="arrowNavbar down"></i></a>
   <div>
@@ -81,10 +82,58 @@
   <a href="../quiz.html">Quiz</a>
 </div>
 <main>
+  <div class="hamburgerMenu">
+    <a id="hamburgerBtnLow"><i class="fa fa-bars"></i></a>
+  </div>
+  <div class="keyart" id="parallax">
+    <div class="keyart_layer parallax" id="keyart-0" data-speed="50"></div>		<!-- 00.0 -->
+  </div>
+  <img src="../img/boygathersgrass.jpg" class="img-3 imgse">
+  <div class="segment-1">
+    <div class="intro-chi-div">
+      <img class="intro-chi" id="beginningsImg4" src="../img/idaf%20prwr%20wgcwzwm%20intro%20icon%204%20bl.png">
+    </div>
+    <div class="text-block">
+      <a class="fontColorLight">
+        <span class="title">Die heutige Situation</span>
+        <p>
+          In dem letzten Jahrzehnt hat China ein langsamer wachsendes Wirtschaftsmodell angenommen, das sich eher auf privaten Konsum und Innovation fokussiert, anstatt auf festgelegte Investitionen und Export. Dies ist notwendig wegen der «Middle Income Trap», bei den Ländern mit starkem wirtschaftlichem Wachstum irgendwann an Dynamik verlieren, weil sie keine neuen Wachstumsquellen wie zum Beispiel Innovationen adoptieren.
+        </p>
+      </a>
+    </div>
+  </div>
+  <div class="segment-2">
+    <div class="text-block">
+      <a class="fontColorLight">
+        <p>
+          Ihr Plan „Made in China 2025“, der 2015 angekündigt wurde, ist eine grosse Priorität. Der Plan zielt darauf ab, Chinas Herstellung in 10 Schlüsselsektoren mit umfangreicher Hilfe der Regierung zu modernisieren, damit China in diesen Sektoren zu einem wichtigen globalen Mitspieler wird. Es wird jedoch befürchtet, dass ihre Absicht darin besteht, ausländische Firmen auszuschliessen und eventuell den globalen Markt zu dominieren.
+        </p>
+      </a>
+    </div>
+  </div>
+  <div class="segment-3">
+    <div class="text-block">
+      <a class="fontColorLight">
+        <span class="title">Korruption</span>
+        <p>
+          China hat natürlich auch einige wirtschaftliche Probleme. Der Mangel an Durchsetzung von Vorschriften führt zu Korruption in der Regierung und fehlgeleiteten Investitionen. In China hängt der Schlüssel zum Erfolg eher mit Verbindungen zur Regierung zusammen als mit den natürlichen Bewegungen des Marktes. Ausländische Firmen haben ebenfalls Schwierigkeiten, mit China zu verhandeln, da die Regelungen inkonsistent und intransparent sind. Zudem werden Verträge oft nicht eingehalten und Rechte nicht geschützt, auch weil es kein unabhängiges Gerichtswesen gibt.
+        </p>
+      </a>
+    </div>
+  </div>
+  <div class="segment-4">
+    <div class="text-block">
+      <a class="fontColorLight">
+        <p>
+          Seit Xi Jinpings Machtübernahme im Jahr 2012 hat er viele Anti-Korruptionsmassnahmen durchgeführt, aber es wird vermutet, dass diese auch dazu dienen, politische Gegner auszuschalten. Anscheinend hat dies auch einen negativen Effekt auf die Wirtschaft, da Regierungsbeamte Angst haben, Projekte zu realisieren, wenn sie denken, sie könnten von der Zentralregierung dafür kritisiert werden. Beobachter argumentieren, dass ohne grössere Transparenz in der Regierung nicht viel Fortschritt im Kampf gegen Korruption erzielt werden kann.
+        </p>
+      </a>
+    </div>
+  </div>
 </main>
 <footer id="footer">
   <div class="footerData">
-    <a href="../disclaimer/de.html" class="footerTitles">Haftungsausschluss</a>
+    <a href="../disclaimer/de.html" class="footerTitles">Disclaimer</a>
   </div>
   <div class="footerData">
     <a href="../source/de.html" class="footerTitles">Quellen</a>

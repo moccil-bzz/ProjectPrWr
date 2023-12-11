@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chinas Weg zur Wirtschaftsmacht</title>
-  <link rel="stylesheet" href='../stylesheet.css'>
-  <link rel="stylesheet" href='../mobilecss.css'>
-  <script src='../script.js'></script>
+  <link rel="stylesheet" href="../stylesheet.css">
+  <link rel="stylesheet" href="../mobilecss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../script.js"></script>
 </head>
-<body>
+<body id="venb">
 <header id="header">
   <div class='bg-header'>
     <img src='../img/idaf%20prwr%20wgcwzwm%20top%20navbar%202.png' alt='A cool navbar background is meant to be here...'>
   </div>
   <div class="start-btn-container">
 
-    <a href="../indexde.html">
+    <a href="../index.html">
       <button id="startBtn">
         <span id="background-image-st-bt"></span>
         <span id="st-bt-text">Home</span>
@@ -29,17 +30,17 @@
     </div>
     <div class="navBtn-container">
       <div class="dropdown">
-        <button id="settingsBtn" class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> Einstellungen <i class="arrowNavbar down"></i></button>
+        <button id="settingsBtn" class="navButtons"> <img class='settings-cog' src='../img/cog%20wh.png' height='30' width='30'> einstellungen <i class="arrowNavbar down"></i></button>
         <div class="dropdown-content dropdown-lightTheme">
           <div id="joe" class="dropdown-theme">
             <a><i class="arrowDropdown arrowColorLight left"></i> Sprache</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
-              <a href="en.html">English</a>
-              <a href="de.html">Deutsch</a>
+              <a href="./en.html">Englisch</a>
+              <a href="./de.html">Deutsch</a>
             </div>
           </div>
           <div id="mama" class="dropdown-theme">
-            <a><i class="arrowDropdown arrowColorLight left"></i> Modus</a>
+            <a href="#"><i class="arrowDropdown arrowColorLight left"></i> Modus</a>
             <div class="dropdown-content-theme dropdown-lightTheme">
               <a id="themeBtn-light">Hell</a>
               <a id="themeBtn-dark">Dunkel</a>
@@ -61,19 +62,19 @@
 <div class="sticky-navBar">
   <a href="../v-ref/de.html"><div class="pg-nav-but">China bevor Reformen</div></a>
   <a href='../e-ref/de.html'><div class="pg-nav-but">Einleitung von Reformen</div></a>
-  <a href='../n-ref/de.html'><div class="pg-nav-but">Entwicklungen nach den Reformen</div></a>
+  <a href='../n-ref/de.html'><div class="pg-nav-but" id="active-page">Entwicklungen nach den Reformen</div></a>
   <a href='../heute/de.html'><div class="pg-nav-but">Heutige wirtschaftliche Situation</div></a>
   <a href="../quiz.html"><div class="pg-nav-but">Quiz</div></a>
 </div>
 <div id="phoneNavbar">
-  <a id="topicBtn">Themen <i class="arrowNavbar down"></i></a>
+  <a id="topicBtn">Topic <i class="arrowNavbar down"></i></a>
   <div>
     <a href="../v-ref/de.html" class="hidden">\\\China bevor Reformen</a>
     <a href='../e-ref/de.html' class="hidden">\\\Einleitung von Reformen</a>
-    <a href='../n-ref/de.html' class="hidden">\\\Entwicklungen nach den Reformen</a>
+    <a href='../n-ref/de.html' class="hidden" id="hidden-phone">\\\Entwicklungen nach den Reformen</a>
     <a href='../heute/de.html' class="hidden">\\\Heutige wirtschaftliche Situation</a>
   </div>
-  <a id="settingsBtnHam">Einstellungen <i class="arrowNavbar down"></i></a>
+  <a id="settingsBtnHam">Settings <i class="arrowNavbar down"></i></a>
   <div>
     <a class="hiddenSet" id="lightThemeBtn">\\\Hell Modus</a>
     <a class="hiddenSet" id="darkThemeBtn">\\\Dunkel Modus</a>
@@ -81,10 +82,50 @@
   <a href="../quiz.html">Quiz</a>
 </div>
 <main>
+  <div class="hamburgerMenu">
+    <a id="hamburgerBtnLow"><i class="fa fa-bars"></i></a>
+  </div>
+  <div class="keyart" id="parallax">
+    <div class="keyart_layer parallax" id="keyart-0" data-speed="50"></div>		<!-- 00.0 -->
+  </div>
+  <img src="../img/boygathersgrass.jpg" class="img-0 imgse">
+  <img src="../img/Brave_the_wind_and_the_waves.jpg" class="img-1 imgse" style="right: 20vw">
+  <img src="../img/deng%20xiaoping.jpg" class="img-2 imgse">
+  <div class="segment-1">
+    <div class="intro-chi-div">
+      <img class="intro-chi" id="beginningsImg2" src="../img/idaf%20prwr%20wgcwzwm%20intro%20icon%203%20bl.png">
+    </div>
+    <div class="text-block">
+      <a class="fontColorLight">
+        <span class="title">Development post introduction</span>
+        <p>
+          Nachdem die Reformen eingeführt wurden, hat der wirtschaftliche Wachstum stark zugenommen und auch grössere ökonomische Störungen wurden vermieden, ausser dem Tiananmen-Massaker im Juni 1989, wo vor allem wegen ausländischen Sanktionen ihre Wirtschaft stark getroffen wurde. Jedoch wurden diese schon 1991 aufgehoben und ihr Wachstum kehrte zurück.
+        </p>
+      </a>
+    </div>
+  </div>
+  <div class="segment-2">
+    <div class="text-block">
+      <a class="fontColorLight">
+        <p>
+          Danach hatte ihr reales BIP (Reales Bruttoinlandsprodukt – Wert von allen Waren oder Dienstleistungen, die ein Land innerhalb eines Jahres produziert, die Inflation miteinbezogen) eine durchschnittliche Steigung von 9,5% im Jahr zwischen 1979 und 2018, das heisst, sie haben durchschnittlich alle acht Jahre die Grösse ihrer Wirtschaft verdoppelt.
+        </p>
+      </a>
+    </div>
+  </div>
+  <div class="segment-4">
+    <div class="text-block">
+      <a class="fontColorLight">
+        <p>
+          Die 2008er Finanzkrise hatte aber auch für China negative Folgen. 20 Millionen Arbeiter, die im Ausland arbeiteten, kehrten zurück, nachdem sie ihre Jobs verloren hatten. Sie konterten die Krise, indem sie 586 Milliarden Dollar investierten, die sich auf Infrastruktur fokussierten und die Lockerung der Geldpolitik, um Kreditaufnahmen bei der Bank zu erhöhen.
+        </p>
+      </a>
+    </div>
+  </div>
 </main>
 <footer id="footer">
   <div class="footerData">
-    <a href="../disclaimer/de.html" class="footerTitles">Haftungsausschluss</a>
+    <a href="../disclaimer/de.html" class="footerTitles">Disclaimer</a>
   </div>
   <div class="footerData">
     <a href="../source/de.html" class="footerTitles">Quellen</a>
