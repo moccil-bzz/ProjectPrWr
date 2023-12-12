@@ -428,7 +428,11 @@ main {
 }
 
 .phone-creds {
+    margin: 70px 10px 10px;
+    top: 230px;
+    border: none;
     display: none;
+    justify-content: space-around;
 }
 
 .betw-1 {
