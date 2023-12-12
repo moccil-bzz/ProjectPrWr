@@ -417,12 +417,12 @@ main {
     margin: auto;
 }
 
-.credits-left {
+#credits-left {
     width: 7.7vw;
     height: auto;
 }
 
-.credits-right {
+#credits-right {
     width: 7.7vw;
     height: auto;
 }
