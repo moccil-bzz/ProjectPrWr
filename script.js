@@ -222,8 +222,10 @@ function content_loader(){
         });
     }
     function dispelParallax() {
-        $("#nonparallax").css('display','block');
-        $("#parallax").css('display','none');
+        document.getElementById("parallax").style.display = "none";
+        document.querySelectorAll(".parallax").forEach( (i) => {
+            i.style.display = "none";
+        })
     }
     function startSite() {
 
@@ -233,15 +235,6 @@ function content_loader(){
         if ( platform.indexOf('ipad') != -1  ||  platform.indexOf('iphone') != -1 )
         {
             dispelParallax();
-        }
-
-        else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
-        {
-            castParallax();
-            if ($.browser.webkit)
-            {
-                //castSmoothScroll();
-            }
         }
 
         else
