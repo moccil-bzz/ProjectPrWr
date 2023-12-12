@@ -304,7 +304,7 @@ function content_loader(){
 
     //---- Showing the images next to content ----//
 
-    let start_show1 = 360; // the scroll distance from the top when the img becomes visible
+    let start_show1 = 575; // the scroll distance from the top when the img becomes visible
     let end_show1 = 750; // scroll distance from top where img becomes invisible
     let start_show2 = 1000;
     let end_show2 = 1400;
@@ -368,8 +368,26 @@ function content_loader(){
             start_show4 = 800
             end_show4 = 1450
             console.log("1 is true")
+        } else if ((window.innerWidth <= 800) && (window.innerHeight <= 340)) {
+            start_show1 = 0
+            end_show1 = -1
+            start_show2 = 0;
+            end_show2 = -1;
+            start_show3 = 0;
+            end_show3 = -1;
+            start_show4 = 0
+            end_show4 = -1
+        } else if ((window.innerWidth <= 450) && (window.innerHeight <= 900)) {
+            start_show1 = 0
+            end_show1 = -1
+            start_show2 = 0;
+            end_show2 = -1;
+            start_show3 = 0;
+            end_show3 = -1;
+            start_show4 = 0
+            end_show4 = -1
         } else {
-            start_show1 = 360
+            start_show1 = 575
             end_show1 = 750
             start_show2 = 1000;
             end_show2 = 1400;
