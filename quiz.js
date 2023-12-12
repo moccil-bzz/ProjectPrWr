@@ -2,16 +2,13 @@ document.addEventListener("DOMContentLoaded", document_load)
 function document_load(){
     const quiz = document.getElementById("quiz");
     quiz.addEventListener("submit", gay)
-    document.getElementById("knopf").addEventListener('click', loader);
     const checkboxes = document.querySelectorAll(".q");
     checkboxes.forEach(checkbox => {
         checkbox.checked = false;
     });
 }
 //gay
-function loader(){
-    alert("hello")
-}
+
 
 function gay(event) {
     event.preventDefault();

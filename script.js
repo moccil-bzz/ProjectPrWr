@@ -512,8 +512,8 @@ function content_loader(){
         if (document.getElementById("beginningsImg2")){
             document.getElementById("beginningsImg2").src = '../img/idaf prwr wgcwzwm intro icon 3 wh.png';
         }
-        if (document.getElementById("beginningsImg2")){
-            document.getElementById("beginningsImg2").src = '../img/idaf prwr wgcwzwm intro icon 4 wh.png';
+        if (document.getElementById("beginningsImg3")){
+            document.getElementById("beginningsImg3").src = '../img/idaf prwr wgcwzwm intro icon 4 wh.png';
         }
         document.querySelectorAll(".dropdown-lightTheme").forEach((i) => {
             i.classList.remove("dropdown-lightTheme")
