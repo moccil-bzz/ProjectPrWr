@@ -214,6 +214,7 @@ function content_loader(){
             let top = this.pageYOffset;
             let scrollTop = window.scrollY;
             console.log(scrollTop)
+            /*console.log(window.innerWidth)*/
             let layers = document.getElementsByClassName("parallax");
             let layer, speed, yPos;
             for (let i = 0; i < layers.length; i++) {
@@ -244,7 +245,8 @@ function content_loader(){
         document.querySelector(".betw-2").style.fontSize = "6vw";
         document.querySelector(".cred-between").style.left = "20%";
         document.querySelector(".cred-between").style.right = "20%";
-        document.querySelector(".phone-creds").style.display = "block";
+        /*document.querySelector(".phone-creds").style.display = "flex";
+        document.getElementById("ib").style.height = "2000px";*/
     }
     function startSite() {
 
@@ -495,6 +497,12 @@ function content_loader(){
         if (document.getElementById("credits-right")) {
             document.getElementById("credits-right").src = './img/credits%20right%20transp%201%20og.png';
         }
+        if (document.getElementById("credits-left2")) {
+            document.getElementById("credits-left2").src = './img/credits%20left%20transp%201%20og.png';
+        }
+        if (document.getElementById("credits-right2")) {
+            document.getElementById("credits-right2").src = './img/credits%20right%20transp%201%20og.png';
+        }
         if (document.getElementById("beginningsImg")){
             document.getElementById("beginningsImg").src = '../img/beginnings_1_bl.png';
         }
@@ -532,6 +540,12 @@ function content_loader(){
         }
         if (document.getElementById("credits-right")){
             document.getElementById("credits-right").src = './img/credits%20right%20transp%20og%201%20dm.png';
+        }
+        if (document.getElementById("credits-left2")){
+            document.getElementById("credits-left2").src = './img/credits%20left%20transp%20og%201%20dm.png';
+        }
+        if (document.getElementById("credits-right2")){
+            document.getElementById("credits-right2").src = './img/credits%20right%20transp%20og%201%20dm.png';
         }
         if (document.getElementById("beginningsImg")){
             document.getElementById("beginningsImg").src = '../img/beginnings_1_wh.png';
