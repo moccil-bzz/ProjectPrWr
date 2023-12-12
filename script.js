@@ -240,7 +240,10 @@ function content_loader(){
         document.querySelectorAll(".parallax").forEach( (i) => {
             i.style.display = "none";
         })
-        document.querySelector(".cred-between").querySelector("a").style.fontSize = "6vw";
+        document.querySelector(".betw-1").style.fontSize = "6vw";
+        document.querySelector(".betw-2").style.fontSize = "6vw";
+        document.querySelector(".cred-between").style.left = "20%";
+        document.querySelector(".cred-between").style.right = "20%";
     }
     function startSite() {
 
