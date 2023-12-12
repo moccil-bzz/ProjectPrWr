@@ -244,6 +244,7 @@ function content_loader(){
         document.querySelector(".betw-2").style.fontSize = "6vw";
         document.querySelector(".cred-between").style.left = "20%";
         document.querySelector(".cred-between").style.right = "20%";
+        document.querySelector(".phone-creds").style.display = "block";
     }
     function startSite() {
 
@@ -488,11 +489,11 @@ function content_loader(){
         }
         localStorage.setItem("themeLight", "true")
         document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-        if (document.getElementById("credits-left")) {
-            document.getElementById("credits-left").src = './img/credits%20left%20transp%201%20og.png';
+        if (document.querySelector(".credits-left")) {
+            document.querySelector(".credits-left").src = './img/credits%20left%20transp%201%20og.png';
         }
-        if (document.getElementById("credits-right")) {
-            document.getElementById("credits-right").src = './img/credits%20right%20transp%201%20og.png';
+        if (document.querySelector(".credits-right")) {
+            document.querySelector(".credits-right").src = './img/credits%20right%20transp%201%20og.png';
         }
         if (document.getElementById("beginningsImg")){
             document.getElementById("beginningsImg").src = '../img/beginnings_1_bl.png';
