@@ -245,8 +245,8 @@ function content_loader(){
         document.querySelector(".betw-2").style.fontSize = "6vw";
         document.querySelector(".cred-between").style.left = "20%";
         document.querySelector(".cred-between").style.right = "20%";
-        /*document.querySelector(".phone-creds").style.display = "flex";
-        document.getElementById("ib").style.height = "2000px";*/
+        document.querySelector(".phone-creds").style.display = "flex";
+        document.getElementById("ib").style.height = "2000px";
     }
     function startSite() {
 
