@@ -240,6 +240,7 @@ function content_loader(){
         document.querySelectorAll(".parallax").forEach( (i) => {
             i.style.display = "none";
         })
+        document.querySelector(".cred-between").querySelector("a").style.fontSize = "6vw";
     }
     function startSite() {
 
