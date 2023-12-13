@@ -169,6 +169,7 @@ function content_loader(){
         }
         changer()
         navSquisher(window.scrollY)
+        dispelParallax()
     });
     //-------------MARKOS STUFF START NO TOUCHYYY!!!!-------------//
     let header = document.querySelector(".header");
@@ -236,17 +237,68 @@ function content_loader(){
             imgShower(scrollTop, i0ID, i1ID, i2ID, i3ID)
         });
     }
+
+    window.addEventListener("touchmove", function() {
+        let scrollTop = window.scrollY;
+        checkScroll(scrollTop)
+    })
+
     function dispelParallax() {
         document.getElementById("parallax").style.display = "none";
         document.querySelectorAll(".parallax").forEach( (i) => {
             i.style.display = "none";
         })
-        document.querySelector(".betw-1").style.fontSize = "6vw";
-        document.querySelector(".betw-2").style.fontSize = "6vw";
-        document.querySelector(".cred-between").style.left = "20%";
-        document.querySelector(".cred-between").style.right = "20%";
-        document.querySelector(".phone-creds").style.display = "flex";
-        document.getElementById("ib").style.height = "2000px";
+        if ( document.querySelector(".betw-1")) {
+            document.querySelector(".betw-1").style.fontSize = "6vw";
+        }
+        if (document.querySelector(".betw-2")) {
+            document.querySelector(".betw-2").style.fontSize = "6vw";
+        }
+        if (document.querySelector(".cred-between")) {
+            document.querySelector(".cred-between").style.left = "20%";
+        }
+        if (document.querySelector(".cred-between")) {
+            document.querySelector(".cred-between").style.right = "20%";
+        }
+        if (document.querySelector(".phone-creds")) {
+            document.querySelector(".phone-creds").style.display = "flex";
+        }
+        if (document.getElementById("ib")) {
+            document.getElementById("ib").style.height = "2000px";
+        }
+        //----if device is an iphone or just generally a mobile it will hide all images that would show up when scrolling----//
+        if (document.querySelectorAll(".imgse")) {
+            document.querySelectorAll(".imgse").forEach((i) => {
+                i.style.display = "none";
+                console.log("bru")
+            })
+        }
+        if (document.querySelector(".flexSegment")) {
+            document.querySelector(".flexSegment").style.display = "flex";
+            document.querySelector(".flexSegment").style.flexWrap = "nowrap";
+            document.querySelector(".flexSegment").style.flexDirection = "column";
+        }
+        if (document.querySelector(".segment-1")) {
+            document.querySelector(".segment-1").style.marginRight = "10%";
+        }
+        if (document.querySelector(".segment-2")) {
+            document.querySelector(".segment-2").style.marginRight = "10%";
+            document.querySelector(".segment-2").style.flexWrap = "nowrap";
+            document.querySelector(".segment-2").style.flexDirection = "column";
+        }
+        if (document.querySelector(".segment-3")) {
+            document.querySelector(".segment-3").style.marginRight = "10%";
+            document.querySelector(".segment-3").style.flexWrap = "nowrap";
+            document.querySelector(".segment-3").style.flexDirection = "column";
+        }
+        if (document.querySelector(".segment-4")) {
+            document.querySelector(".segment-4").style.marginRight = "10%";
+            document.querySelector(".segment-4").style.flexWrap = "nowrap";
+            document.querySelector(".segment-4").style.flexDirection = "column";
+        }
+        if (document.querySelector(".venb")) {
+            document.querySelector(".venb").style.top = "auto";
+        }
     }
     function startSite() {
 

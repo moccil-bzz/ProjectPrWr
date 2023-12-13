@@ -590,9 +590,7 @@ main {
 
 .segment-1 {
     display: flex;
-    position: absolute;
-    left: 10%;
-    top: 300px;
+    margin-left: 10%;
     /*border: pink solid;*/
     margin-right: 10%;
     margin-bottom: 300px;
@@ -600,27 +598,21 @@ main {
 
 .segment-2 {
     display: flex;
-    position: absolute;
-    left: 10%;
-    top: 900px;
+    margin-left: 10%;
     /*border: pink solid;*/
     margin-right: 50%;
 }
 
 .segment-3 {
     display: flex;
-    position: absolute;
-    left: 10%;
-    top: 1500px;
+    margin-left: 10%;
     /*border: pink solid;*/
     margin-right: 50%;
 }
 
 .segment-4 {
     display: flex;
-    position: absolute;
-    left: 10%;
-    top: 2100px;
+    margin-left: 10%;
     /*border: pink solid;*/
     margin-right: 50%;
 }
