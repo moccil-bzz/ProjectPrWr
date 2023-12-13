@@ -122,6 +122,13 @@
         top: 25vh;
         height: 200px;
     }
+    .quiztext {
+        font-size: 45px;
+        font-weight: bold;
+    }
+    .quizquestion {
+        font-size: 40px;
+    }
 }
 
 @media screen and (max-width: 819px) {
@@ -130,7 +137,6 @@
         height: 3300px;
     }
 }
-
 
 @media screen and (max-width: 750px) {
     .footerTitles {
