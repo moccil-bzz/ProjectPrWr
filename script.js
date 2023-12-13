@@ -169,7 +169,6 @@ function content_loader(){
         }
         changer()
         navSquisher(window.scrollY)
-        dispelParallax()
     });
     //-------------MARKOS STUFF START NO TOUCHYYY!!!!-------------//
     let header = document.querySelector(".header");
